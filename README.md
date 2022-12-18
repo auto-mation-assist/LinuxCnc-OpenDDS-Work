@@ -7,7 +7,7 @@ Initial openDDS install Guide and the goals of this project
     
     I have created my install guide for openDDS on my Linux Mint 20
     development system for LinuxCnc. This file is located in the
-    Install-Notes folder with the "first.dds.install".
+    Install-Notes folder with the "first.dds.install.txt".
     
     
     This is my project for using openDDS for use within LinuxCnc
