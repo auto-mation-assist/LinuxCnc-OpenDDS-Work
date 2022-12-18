@@ -3,15 +3,18 @@
 
 Initial openDDS install Guide and the goals of this project
 
-
-Initial openDDS install Guide and the goals of this project
------------------------------------------------------------
-
-    This is my first build for testing for potential use within LinuxCnc
-    for handling all communications and data movement between LinuxCnc
+    12/18/2022
+    
+    I have created my install guide for openDDS on my Linux Mint 20
+    development system for LinuxCnc. This file is located in the
+    Install-Notes folder with the "first.dds.install".
+    
+    
+    This is my project for using openDDS for use within LinuxCnc
+    to handle all communications and data movement between LinuxCnc
     internal modules, and to provide network wide access to all data
     being routed to and from those individual modules using the
-    openDDS standard.
+    openDDS standard. 
 
     The final step if successful would be to completely
     remove NML and all its associated code after everything
