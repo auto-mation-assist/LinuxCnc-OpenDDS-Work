@@ -1,0 +1,547 @@
+12-18-2022
+
+DDS first install in - Linux Mint 20 -  by Auto-Mation-Assist
+
+Testing info is at the end of this note.
+
+
+My Linux Mint 20 development configuration
+-----------------------------------------
+
+Linux cnc1 on Dell OptiPlex-9020 with kernel 6.1.0-0-rt-amd64
+SMP PREEMPT_RT Debian 6.1~rc7-1~exp1 (2022-12-01) x86_64 x86_64 x86_64 GNU/Linux
+
+
+Links used for this openDDS procject for c++:
+---------------------------------------------
+
+    https://github.com/topics/opendds
+    https://github.com/objectcomputing
+    https://github.com/objectcomputing/OpenDDS
+    https://xerces.apache.org/xerces-c/download.cgi
+
+
+I have not looked at what appears to be a Python version
+
+    https://github.com/OpenDDS/pyopendds
+
+
+First step: Clone openDDS for use after all depends are installed
+-----------------------------------------------------------------
+
+
+In home folder open terminal and clone openDDS with the below command.
+
+    git clone https://github.com/objectcomputing/OpenDDS.git
+
+    Result:
+    ---------------
+    Cloning into 'OpenDDS'...
+    remote: Enumerating objects: 247540, done.
+    remote: Counting objects: 100% (2047/2047), done.
+    remote: Compressing objects: 100% (716/716), done.
+    remote: Total 247540 (delta 1403), reused 1909 (delta 1325), pack-reused 245493
+    Receiving objects: 100% (247540/247540), 103.78 MiB | 7.50 MiB/s, done.
+    Resolving deltas: 100% (193422/193422), done.
+     --------------
+
+
+Installing the presently known depends.
+------------------------------------------------------------------
+It looks like most of the depends will need "dev" files installed.
+
+
+I installed these:
+
+    $ sudo apt-get install openssl
+    $ sudo apt-get install libssl-dev
+    $ sudo apt-get install libxerces-c-dev
+    $ sudo apt-get install perl
+    $ sudo apt-get install wireshark
+    $ sudo apt-get install wireshark-dev
+    $ sudo apt-get install qtbase5-dev
+
+    And Java:
+
+    The following Java versions were found to be available to install for Mint 20
+    -----------------------------------------------------------------------------
+        default-jre  
+        openjdk-8-jre-headless 
+        openjdk-11-jre-headless
+        openjdk-13-jre-headless
+        openjdk-16-jre-headless4
+
+    I decited to use Java v16 and its dev kit
+    -----------------------------------------
+    $ sudo apt install openjdk-16-jre-headless
+    $ sudo apt-get install openjdk-16-jdk
+
+Now running: $ java -version
+    showed:
+    openjdk version "16.0.1" 2021-04-20
+    OpenJDK Runtime Environment (build 16.0.1+9-Ubuntu-120.04)
+    OpenJDK 64-Bit Server VM (build 16.0.1+9-Ubuntu-120.04, mixed mode, sharing)
+
+Now rRunning: $ javac -version
+    showed: javac 16.0.1
+
+
+Now I worked on installing "xerces"
+Synaptic on Debian can install these which makes some a bit easier to install.
+Some may not be required. The main install for "xerces" will come from this link.
+https://xerces.apache.org/xerces-c/download.cgi
+
+Dont know anything about "xerces" installed the below:
+
+    $ sudo apt-get install libxerces-c-dev
+    $ sudo apt-get install libxerces-c-doc
+    $ sudo apt-get install libxerces-c-samples
+    $ sudo apt-get install libxerces-c3.2
+    $ sudo apt-get install libxerces2-java
+    $ sudo apt-get install libxerces2-java-doc
+    $ sudo apt-get install libxml-commons-resolver1.1-java
+
+
+Not sure if I needed this but I downloaded "xerces-c-3.2.4.tar.xz" from:
+-----------------------------------------------------------------------
+
+    https://xerces.apache.org/xerces-c/download.cgi
+
+Extracted it, built and installed it with the below commands.
+
+
+By default "make install" will install all the files in `/usr/local/bin', `/usr/local/lib' etc.
+-----------------------------------------------------------------------------------------------
+    You can specify An installation prefix other than `/usr/local'
+    using `--prefix', for instance `--prefix=$HOME'.
+
+
+    From inside the Xerces directory
+    Not in the src folder!
+    ----------------------
+    Folder for me it is: /home/cnc1/Downloads/xerces-c-3.2.4/xerces-c-3.2.4
+
+    $ ./configure
+    $ make
+    $ sudo make install
+
+
+Note fron the install log:
+--------------------------
+    Libraries have been installed in:
+    /usr/local/lib
+
+    If you ever happen to want to link against installed libraries
+    in a given directory, LIBDIR, you must either use libtool, and
+    specify the full pathname of the library, or use the '-LLIBDIR'
+    flag during linking and do at least one of the following:
+    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable during execution
+    - add LIBDIR to the 'LD_RUN_PATH' environment variable during linking
+    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+    See any operating system documentation about shared libraries for
+    more information, such as the ld(1) and ld.so(8) manual pages.
+
+
+Had to make thsi link, but not sure if others are required yet.
+--------------------------------------------------------------
+
+    In Linux Mint 20 it installed in: /usr/local/include/xercesc 
+    But DDS was looking for it in:    /usr/include/xercesc
+
+        Made a link from:  /usr/local/include/xercesc using root:
+
+    Used the below command in root /usr/local/include/xercesc to generate the link:
+
+        # sudo ln -s /usr/local/include/xercesc
+
+Depends completed
+===================================================================================
+
+
+Configuring openDDS
+-------------------
+
+>>> My initial configure file string is around line 281. <<<
+
+
+Here is the openDDS configure help list.
+----------------------------------------
+My configure starts at about line 311
+
+Welcome to OpenDDS version 3.23.0-dev
+
+Options for this script are listed below, with the default behavior described
+in parenthesis after the option description.
+Boolean options can take the form "--opt" or "--no-opt", the more commonly
+needed one (the one that changes the default behavior) is shown below.
+Options that require arguments are shown as "--opt=VAL"  Options with optional
+arguments are shown as "--opt[=VAL]".  Options that can be repeated with
+cumulative effect are shown with a trailing "...".  Some third-party
+optional dependencies can be automatically located if they are installed in the
+expected locations (see entries below marked with "system pkg").  In those
+cases, specify the option as --opt without an = to enable the corresponding
+feature in OpenDDS and use the default installation location.
+
+Options controlling the configure script:
+--help                          Show this help and exit
+--target-help                   Show details of cross-compile target configs
+--verbose                       Trace script execution
+--dry-run                       Don't do anything
+--[no-]backup                   Make backup of build configuration files (yes)
+
+Build platform and compiler:
+--host=VAL                      Host (auto detect: linux, win32, solaris, macosx)
+--compiler=VAL                  Compiler (auto detect / guess by searching PATH)
+--std=VAL                       C++ standard version (for compilers that use -std)
+--target=VAL                    Cross-compile target (none): see --target-help
+--target-compiler=VAL           Compiler for target (if req'd): see --target-help
+--host-tools=VAL                DDS_ROOT of host tools for cross compile (build)
+--host-ace=VAL                  Define host ACE_ROOT (uses relative path from
+                                target DDS_ROOT to target ACE_ROOT)
+--host-tools-only               Just build the host tools (no)
+--prefix=VAL                    Installation prefix (none)
+--install-origin-relative       Install with RPATH relative to $ORIGIN (no)
+--workspace=VAL                 Custom MPC workspace file to copy and use
+                                (Use a builtin one)
+
+Build flags:
+--[no-]debug                    Debugging (yes)
+--optimize                      Optimization (no)
+--[no-]inline                   Inlining (yes)
+--static                        Static libraries (no)
+--ipv6                          IPv6 support (no)
+--sanitize=VAL...               Build with a sanitizer, can pass multiple times
+                                or one list separated by commas, combining asan
+                                and tsan isn't recommended (no sanitizers)
+                                  asan: Address Sanitizer, gcc/clang only
+                                  tsan: Thread Sanitizer, gcc/clang only
+                                  ubsan: Undefined Behavior Sanitizer, clang only
+
+Required dependencies for OpenDDS:
+--ace=VAL                       ACE (use ACE_ROOT, ACE_wrappers, or download)
+--tao=VAL                       TAO (use TAO_ROOT, ACE_ROOT/TAO, or download)
+--mpc=VAL                       MPC (use MPC_ROOT, ACE_ROOT/MPC, or download)
+--doc-group                     Use the DOC Group release of TAO 2.5.x (no)
+--doc-group3                    Use the DOC Group release of TAO 3.x (no)
+--ace-github-latest             Clone latest ACE/TAO/MPC from GitHub (no)
+--force-ace-tao                 Force configuration of ACE/TAO (no)
+--no-disable-deprecated         Turn off disabling deprecated interfaces when
+                                configuring ACE/TAO (no)
+
+Advanced configuration:
+--configh=VAL...                Extra text for config.h
+--macros=VAL...                 Extra text for platform_macros.GNU
+--features=VAL...               Extra text for default.features
+--mpcopts=VAL...                Extra command-line args for MPC
+
+Optional dependencies for OpenDDS (disabled by default unless noted otherwise):
+--java[=VAL]                    Java development kit (use JAVA_HOME)
+--jboss[=VAL]                   JBoss application server (use JBOSS_HOME)
+--ant[=VAL]                     Ant for JBoss (use ANT_HOME or system pkg)
+--wireshark[=VAL]               Wireshark dev headers or source not built with
+                                CMake (use WIRESHARK_SRC or system pkg)
+                                Implies --glib
+--wireshark-cmake[=VAL]         Wireshark source built with CMake, requires
+                                --wireshark-build. Requires --wireshark-lib if
+                                guessing fails (use WIRESHARK_SRC)
+                                Implies --glib
+--wireshark-build=VAL           Wireshark CMake Build Location
+--wireshark-lib=VAL             Optional Wireshark CMake libraries location
+                                relative to wireshark-build (guesses)
+--glib[=VAL]                    GLib for Wireshark (use GLIB_ROOT or system pkg)
+--[no-]rapidjson[=VAL]          RapidJSON for Wireshark dissector and JSON
+                                Sample Serialization (Enabled by default,
+                                use git submodle, RAPIDJSON_ROOT, or system pkg)
+--qt[=VAL]                      Qt5 (use QTDIR or system pkg)
+--qt-include[=VAL]              Qt include dir (use QT5_INCDIR, QTDIR/include,
+                                or sysytem package)
+--xerces3[=VAL]                 Xerces-C++ 3 for QoS XML handling, DDS Security
+--openssl[=VAL]                 OpenSSL for DDS Security
+--cmake[=VAL]                   Path to cmake binary for compiling Google Test
+                                Framework. (Check Path and Check Normal
+                                Locations)
+--gtest[=VAL]                   Path to Google Test Framework, required for
+                                tests (uses GTEST_ROOT).
+                                If not built, will try to build using CMake.
+
+Optional OpenDDS features:
+--[no-]built-in-topics          Built-in Topics (yes)
+--[no-]content-subscription     Content-Subscription Profile (yes)
+--[no-]content-filtered-topic   ContentFilteredTopic (CS Profile) (yes)
+--[no-]multi-topic              MultiTopic (CS Profile) (yes)
+--[no-]query-condition          QueryCondition (CS Profile) (yes)
+--[no-]ownership-profile        Ownership Profile (yes)
+--[no-]ownership-kind-exclusive Exclusive Ownership (Ownership Profile) (yes)
+--[no-]object-model-profile     Object Model Profile (yes)
+--[no-]persistence-profile      Persistence Profile (yes)
+--safety-profile[=VAL]          Safety Profile: base or extended (none)
+--tests                         Build tests, examples, and performance tests (no)
+                                Requires --gtest if missing git submodule
+--security                      DDS Security plugin (no) Implies --openssl and
+                                --xerces3
+cnc1@cnc1-OptiPlex-9020:~/OpenDDS$ 
+  
+
+    I opened a terminal in my DDS folder: /home/cnc1/OpenDDS
+
+    If you are in the home directory:
+
+    $ cd OpenDDS
+
+    I used my initial configure string:
+    -----------------------------------
+    Requires internet connection to download files  - Configure takes about 5 minutes
+ 
+    $ ./configure  --java --wireshark --glib --qt --security --xerces3 --tests --gtest --cmake --verbose
+
+
+Result gave this output in th terminal:
+--------------------------------------
+
+nc1@cnc1-OptiPlex-9020:~/OpenDDS$ ./configure  --java --wireshark --glib --qt --security --xerces3 --tests --gtest --cmake --verbose
+Options:
+'cmake' => ''
+'glib' => ''
+'gtest' => ''
+'java' => ''
+'qt' => ''
+'security' => 1
+'tests' => 1
+'verbose' => 1
+'wireshark' => ''
+'xerces3' => ''
+By default, --rapidjson is added to the options
+host system is: linux
+Auto-detecting compiler
+Found g++ at: /usr/bin/g++
+compiler is: g++
+Detected GCC >= 6, default -std=gnu++14
+Compiler has >= C++11 support
+Downloading ACE+TAO 2.2a with latest patches
+Extracting archive ACE+TAO-2.2a_with_latest_patches_NO_makefiles.tar.gz
+In "/home/cnc1/OpenDDS" running (list):
+ - "tar"
+ - "xzf"
+ - "/home/cnc1/OpenDDS/ACE+TAO-2.2a_with_latest_patches_NO_makefiles.tar.gz"
+Removed ACE+TAO-2.2a_with_latest_patches_NO_makefiles.tar.gz
+Using ace_src: ACE_wrappers
+Using tao_src: ACE_wrappers/TAO
+Forcing --openssl (security dependency)
+--cmake not specified by user; searching path...
+Using CMake '/usr/bin/cmake' if needed
+Could not find Google Test, cloning...
+In "/home/cnc1/OpenDDS" running (list):
+ - "git"
+ - "submodule"
+ - "update"
+ - "--init"
+ - "tests/googletest"
+Submodule 'tests/googletest' (https://github.com/oci-labs/googletest) registered for path 'tests/googletest'
+Cloning into '/home/cnc1/OpenDDS/tests/googletest'...
+remote: Enumerating objects: 14156, done.
+remote: Counting objects: 100% (14155/14155), done.
+remote: Compressing objects: 100% (2897/2897), done.
+remote: Total 13968 (delta 10360), reused 13882 (delta 10274), pack-reused 0
+Receiving objects: 100% (13968/13968), 4.29 MiB | 2.87 MiB/s, done.
+Resolving deltas: 100% (10360/10360), completed with 72 local objects.
+From https://github.com/oci-labs/googletest
+ * branch            e6cfde4af187808e97308dfc8a4fab00632447cc -> FETCH_HEAD
+Submodule path 'tests/googletest': checked out 'e6cfde4af187808e97308dfc8a4fab00632447cc'
+Could not find RapidJSON, cloning...
+In "/home/cnc1/OpenDDS" running (list):
+ - "git"
+ - "submodule"
+ - "update"
+ - "--init"
+ - "tools/rapidjson"
+Submodule 'tools/rapidjson' (https://github.com/miloyip/rapidjson.git) registered for path 'tools/rapidjson'
+Cloning into '/home/cnc1/OpenDDS/tools/rapidjson'...
+remote: Enumerating objects: 12710, done.
+remote: Counting objects: 100% (12710/12710), done.
+remote: Compressing objects: 100% (3454/3454), done.
+remote: Total 12490 (delta 8091), reused 12197 (delta 7798), pack-reused 0
+Receiving objects: 100% (12490/12490), 7.02 MiB | 7.29 MiB/s, done.
+Resolving deltas: 100% (8091/8091), completed with 163 local objects.
+From https://github.com/miloyip/rapidjson
+ * branch            fd3dc29a5c2852df569e1ea81dbde2c412ac5051 -> FETCH_HEAD
+Submodule path 'tools/rapidjson': checked out 'fd3dc29a5c2852df569e1ea81dbde2c412ac5051'
+Using '/home/cnc1/OpenDDS/tools/rapidjson' for RapidJSON
+Defaulting qt to /usr
+Defaulting openssl to /usr
+Defaulting xerces3 to /usr
+Defaulting glib to /usr
+Found javac major version 16
+Feature java_pre_jpms=0 due to Java version
+Enabling wireshark
+Enabling qt
+Enabling rapidjson
+Enabling openssl
+Enabling xerces3
+Enabling glib
+Didn't find glib at /usr using alternative include/glib.h
+Found glib at /usr using alternative include/glib-2.0/glib.h
+Enabling java
+OpenSSL version detected: "OpenSSL 1.1.1f  31 Mar 2020"
+OpenSSL 1.1+ MPC feature enabled
+Building Google Test...
+In "/home/cnc1/OpenDDS/tests/googletest/build" running (list):
+ - "/usr/bin/cmake"
+ - "-DCMAKE_INSTALL_PREFIX=/home/cnc1/OpenDDS/tests/googletest/build/install"
+ - "-DCMAKE_INSTALL_LIBDIR=lib"
+ - "-DCMAKE_POSITION_INDEPENDENT_CODE=TRUE"
+ - ".."
+In "/home/cnc1/OpenDDS/tests/googletest/build" running (list):
+ - "/usr/bin/cmake"
+ - "--build"
+ - "."
+ - "--target"
+ - "install"
+Done Building Google Test
+pkg-config found GLIB_LIB_DIR=lib/x86_64-linux-gnu
+Wrote /home/cnc1/OpenDDS/ACE_wrappers/ace/config.h
+Wrote /home/cnc1/OpenDDS/ACE_wrappers/.../default.features
+Wrote /home/cnc1/OpenDDS/ACE_wrappers/.../platform_macros.GNU
+Writing /home/cnc1/OpenDDS/user_macros.GNU
+Appended to /home/cnc1/OpenDDS/ACE_wrappers/.../default.features
+ENV: saving current environment
+ENV: Setting TAO_ROOT to /home/cnc1/OpenDDS/ACE_wrappers/TAO
+ENV: Setting SSL_ROOT to /usr
+ENV: Setting MPC_ROOT to /home/cnc1/OpenDDS/ACE_wrappers/MPC
+ENV: Setting WIRESHARK_SRC to /usr/include/wireshark
+ENV: Setting XERCESCROOT to /usr
+ENV: Setting DANCE_ROOT to unused
+ENV: Setting ACE_ROOT to /home/cnc1/OpenDDS/ACE_wrappers
+ENV: Appending :/usr/lib/x86_64-linux-gnu:/home/cnc1/OpenDDS/ACE_wrappers/lib:/home/cnc1/OpenDDS/lib to LD_LIBRARY_PATH
+ENV: Setting QT5_INCDIR to /usr/include/x86_64-linux-gnu/qt5
+ENV: Setting JAVA_HOME to /usr/lib/jvm/java-16-openjdk-amd64
+ENV: Setting QT5_BINDIR to /usr/lib/x86_64-linux-gnu/qt5/bin
+ENV: Setting QTDIR to /usr
+ENV: Setting RAPIDJSON_ROOT to /home/cnc1/OpenDDS/tools/rapidjson
+ENV: Setting QT5_SUFFIX to 
+ENV: Setting DDS_ROOT to /home/cnc1/OpenDDS
+ENV: Setting GLIB_LIB_DIR to lib/x86_64-linux-gnu
+ENV: Setting JAVA_PLATFORM to linux
+ENV: Setting QT5_LIBDIR to /usr/lib/x86_64-linux-gnu
+ENV: Appending :/home/cnc1/OpenDDS/ACE_wrappers/bin:/home/cnc1/OpenDDS/bin to PATH
+ENV: Setting CIAO_ROOT to unused
+ENV: Setting GLIB_ROOT to /usr
+Wrote /home/cnc1/OpenDDS/bin/opendds_mwc.pl
+Running MPC to generate makefiles.
+In "/home/cnc1/OpenDDS" running (list):
+ - "perl"
+ - "/home/cnc1/OpenDDS/ACE_wrappers/bin/mwc.pl"
+ - "-type"
+ - "gnuace"
+ - "/home/cnc1/OpenDDS/DDS_TAOv2_all.mwc"
+MPC_ROOT was set to /home/cnc1/OpenDDS/ACE_wrappers/MPC.
+Using .../OpenDDS/ACE_wrappers/bin/MakeProjectCreator/config/MPC.cfg
+Generating 'gnuace' output using DDS_TAOv2_all.mwc
+Skipping TAO_IDL_GEN (tao_idl_fe.mpc); it requires tao_idl_fe_gen.
+Skipping OpenDDS_XML_QOS_XSC_Generation (qos_xml_handler.mpc); it requires xsc.
+Skipping OpenDDS_Corba (OpenDDS_Corba.mpc); it avoids no_opendds_safety_profile.
+Generation Time: 1m 6s
+ENV: restoring previous environment
+Wrote /home/cnc1/OpenDDS/setenv.sh
+Wrote /home/cnc1/OpenDDS/GNUmakefile, wrapping original GNUmakefile.dist
+Completed configuring OpenDDS, next run 'make' to compile OpenDDS and ACE+TAO.
+You can use the generated setenv.sh script to set environment
+variables for future shell sessions.
+
+End of result file
+=====================================================================================
+
+
+I see that the below gave some warnings:
+
+Skipping TAO_IDL_GEN (tao_idl_fe.mpc); it requires tao_idl_fe_gen.
+
+    Note from internet:
+    -------------------
+    You have to generate the project file for that part, go to the
+    ACE_wrappers/TAO/TAO_IDL and use the command:
+
+    $ACE_ROOT/bin/mwc.pl -type gnuace -features tao_idl_fe_gen=1
+
+    That should give you an additional makefile to regenerate the files, but
+    be aware that this is hardly used, so not sure it this all works out of
+    the box.
+
+    And reply to the above:
+    -----------------------
+    That seems to work.
+
+    So for the record (and in case others wonder), this is what I do:
+
+    cd $ACE_ROOT/TAO/TAO_IDL
+    $ACE_ROOT/bin/mwc.pl -static -type gnuace -features tao_idl_fe_gen=1
+    make -f GNUmakefile.TAO_IDL_GEN y.tab
+    make -f GNUmakefile.TAO_IDL_GEN lex.yy
+    make  
+ 
+
+Skipping OpenDDS_XML_QOS_XSC_Generation (qos_xml_handler.mpc); it requires xsc.
+
+    Is quality of service reuired for XML ?
+
+Skipping OpenDDS_Corba (OpenDDS_Corba.mpc); it avoids no_opendds_safety_profile.
+
+    Know nothing about this.
+
+Info from internet search - which may or may not be correct:
+------------------------------------------------------------
+    These are just warnings, the features they need are not enabled
+    so those libraries are not compiled. These are safe to ignore unless you need
+    the QoS XML support or the safety profile
+
+=====================================================================================
+
+
+set environment for use with testing in perl terminal windows later
+-------------------------------------------------------------------
+
+
+The below "setenv.sh" command can be executed from within the openDDS folder.
+It was/is enerated by the openDDS ./configure command.
+You can use the generated "setenv.sh" script to set environment
+variables for future shell sessions.
+
+It is located here:  /home/cnc1/OpenDDS/setenv.sh
+
+
+    $ sh ./setenv.sh
+
+    Executes without error
+
+
+Running "make' - >>> "make" took 2 hours for this configuration <<<
+-----------------------------------------------------------------------------------
+Compiles OpenDDS, ACE, TAO and other files as specified by the configure options.
+
+
+    $ make
+                             
+
+Installing: - >>> "make install" took 2 minutes hours for this configuration <<<
+-----------
+
+
+    $ sudo make install INSTALL_PREFIX=/usr/local
+
+
+openDDS, ACE and TAO have includes located here after install: /usr/local/include 
+
+
+Testing
+-------
+
+The OpenDDS Developers Guide has info on how to run the tests.
+
+It is time to do some testing using Perl and the files in: /home/cnc1/OpenDDS/DevGuideExamples/DCPS
+
+I expect some difficulty due to potential paths not being what is expected. I did get a Perl
+module warning that I have not resolved.
+
+END OF THIS NOTE  12-18-2022
+==================================================================================
