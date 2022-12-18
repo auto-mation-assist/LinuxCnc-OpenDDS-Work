@@ -1,4 +1,4 @@
-# -LinuxCnc-OpenDDS-Work
+# LinuxCnc-OpenDDS-Work
 
 
 Initial openDDS install Guide and the goals of this project
