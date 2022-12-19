@@ -1,0 +1,130 @@
+
+Test: DCPS/Messenger - From: /home/cnc1/OpenDDS/DevGuideExamples/DCPS folder.
+
+
+In home folder:
+---------------
+
+    $ cd /home/cnc1/OpenDDS
+
+Now run
+
+    $ source setenv.sh
+
+Now change directory
+
+    $ cd DevGuideExamples/DCPS/Messenger
+
+Now run
+
+    $ ./run_test.pl
+
+The result:
+-----------
+
+/home/cnc1/OpenDDS/bin/DCPSInfoRepo -ORBDebugLevel 1 -ORBLogFile DCPSInfoRepo.log -o repo.ior -DCPSPendingTimeout 3 
+InfoRepo PID: 4182
+/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger/subscriber  -ORBDebugLevel 1 -DCPSDebugLevel 4 -ORBVerboseLogging 1 -DCPSTransportDebugLevel 2 -ORBLogFile subscriber.log -DCPSPendingTimeout 3 
+subscriber PID: 4189 started at 2022-12-19 03:04:29
+/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger/publisher  -ORBDebugLevel 1 -DCPSDebugLevel 4 -ORBVerboseLogging 1 -DCPSTransportDebugLevel 2 -ORBLogFile publisher.log -DCPSPendingTimeout 3 
+publisher PID: 4190 started at 2022-12-19 03:04:29
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 100
+         from       = Comic Book Guy
+         count      = 1
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 101
+         from       = Comic Book Guy
+         count      = 2
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 102
+         from       = Comic Book Guy
+         count      = 3
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 103
+         from       = Comic Book Guy
+         count      = 4
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 104
+         from       = Comic Book Guy
+         count      = 5
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 105
+         from       = Comic Book Guy
+         count      = 6
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 106
+         from       = Comic Book Guy
+         count      = 7
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 107
+         from       = Comic Book Guy
+         count      = 8
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 108
+         from       = Comic Book Guy
+         count      = 9
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_NO_WRITERS_INSTANCE_STATE
+INFO: /home/cnc1/OpenDDS/bin/DCPSInfoRepo being killed.
+test PASSED.
+
+-------------------------------------------------------------------------------------------
+
+
+ 
+
+
+

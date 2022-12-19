@@ -1,0 +1,115 @@
+
+Test: Messenger_ZeroCopy - From: /home/cnc1/OpenDDS/DevGuideExamples/DCPS folder.
+
+
+In home folder:
+---------------
+
+    $ cd /home/cnc1/OpenDDS
+
+Now run
+
+    $ source setenv.sh
+
+Now change directory - Correct for me 
+
+    $ cd /home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger_ZeroCopy
+
+Now run
+
+    $ ./run_test.pl
+
+The result:
+-----------
+
+/home/cnc1/OpenDDS/bin/DCPSInfoRepo -ORBDebugLevel 10 -DCPSDebugLevel 10 -ORBLogFile DCPSInfoRepo.log -o repo.ior 
+TAO (4383|4383) - Completed initializing the process-wide service context
+TAO (4383|4383) - Default ORB services initialization begins
+TAO (4383|4383) - ORBInitializer_Registry::register_orb_initializer 0 @0x55e2f0056650
+TAO (4383|4383) - ORBInitializer_Registry::register_orb_initializer 1 @0x55e2f00565d0
+TAO (4383|4383) - Default ORB services initialization completed
+TAO (4383|4383) - We are the default ORB ...
+TAO (4383|4383) - Initializing the orb-specific services
+/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger_ZeroCopy/publisher  -ORBDebugLevel 10 -DCPSDebugLevel 10 -ORBLogFile publisher.log
+/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger_ZeroCopy/subscriber  -ORBDebugLevel 10 -DCPSDebugLevel 10 -DCPSTransportDebugLevel 6 -ORBLogFile subscriber.log
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 1
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 1
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 1
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 1
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 1
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 1
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 1
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 1
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 1
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 1
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = 2
+INFO: /home/cnc1/OpenDDS/bin/DCPSInfoRepo being killed.
+
+-------------------------------------------------------------------------------------------
+
+
+ 
+
+
+

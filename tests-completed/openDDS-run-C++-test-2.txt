@@ -1,0 +1,94 @@
+
+Test: DCPS/Messenger.minimal - From: /home/cnc1/OpenDDS/DevGuideExamples/DCPS folder.
+
+
+In home folder:
+---------------
+
+    $ cd /home/cnc1/OpenDDS
+
+Now run
+
+    $ source setenv.sh
+
+Now change directory
+
+    $ cd /home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger.minimal
+
+Now run
+
+    $ ./run_test.pl
+
+The result:
+-----------
+
+/home/cnc1/OpenDDS/bin/DCPSInfoRepo -ORBDebugLevel 10 -ORBLogFile DCPSInfoRepo.log -o repo.ior
+TAO (4576|4576) - Completed initializing the process-wide service context
+TAO (4576|4576) - Default ORB services initialization begins
+TAO (4576|4576) - ORBInitializer_Registry::register_orb_initializer 0 @0x5566f0465580
+TAO (4576|4576) - ORBInitializer_Registry::register_orb_initializer 1 @0x5566f0465500
+TAO (4576|4576) - Default ORB services initialization completed
+TAO (4576|4576) - We are the default ORB ...
+TAO (4576|4576) - Initializing the orb-specific services
+/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger.minimal/publisher  -ORBDebugLevel 10 -DCPSDebugLevel 10 -ORBLogFile publisher.log
+/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger.minimal/subscriber  -ORBDebugLevel 10 -DCPSDebugLevel 10 -DCPSTransportDebugLevel 6 -ORBLogFile subscriber.log
+Msg: subject    Review
+     subject_id 99
+     from       Comic Book Guy
+     count      0
+     text       Worst. Movie. Ever.
+Msg: subject    Review
+     subject_id 100
+     from       Comic Book Guy
+     count      1
+     text       Worst. Movie. Ever.
+Msg: subject    Review
+     subject_id 101
+     from       Comic Book Guy
+     count      2
+     text       Worst. Movie. Ever.
+Msg: subject    Review
+     subject_id 102
+     from       Comic Book Guy
+     count      3
+     text       Worst. Movie. Ever.
+Msg: subject    Review
+     subject_id 103
+     from       Comic Book Guy
+     count      4
+     text       Worst. Movie. Ever.
+Msg: subject    Review
+     subject_id 104
+     from       Comic Book Guy
+     count      5
+     text       Worst. Movie. Ever.
+Msg: subject    Review
+     subject_id 105
+     from       Comic Book Guy
+     count      6
+     text       Worst. Movie. Ever.
+Msg: subject    Review
+     subject_id 106
+     from       Comic Book Guy
+     count      7
+     text       Worst. Movie. Ever.
+Msg: subject    Review
+     subject_id 107
+     from       Comic Book Guy
+     count      8
+     text       Worst. Movie. Ever.
+Msg: subject    Review
+     subject_id 108
+     from       Comic Book Guy
+     count      9
+     text       Worst. Movie. Ever.
+Subscriber received 10 samples
+INFO: /home/cnc1/OpenDDS/bin/DCPSInfoRepo being killed.
+
+-------------------------------------------------------------------------------------------
+
+
+ 
+
+
+
