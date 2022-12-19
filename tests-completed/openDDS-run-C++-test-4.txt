@@ -1,3 +1,4 @@
+Testing more - 12-19-2022
 
 -----------------------------------------------------------------
     My folder location "/home/cnc1/OpenDDS" is only for my system
@@ -12,36 +13,51 @@
 -----------------------------------------------------------------
 
 
+This example will use the "OpenDDS/DevGuideExamples/DCPS/Messenger" test
+using OpenDDS specific InfoRepo discovery or the standard RTPS discovery
+method.
 
-Test: DCPS/Messenger - From: /home/cnc1/OpenDDS/DevGuideExamples/DCPS folder.
 
+Go to OpenDDS root folder and open terminal as below:
+Change location as required.
+----------------------------
 
-In home folder:
----------------
 
     $ cd /home/cnc1/OpenDDS
 
-Now run
 
-    $ source setenv.sh
+Now set source using:
 
-Now change directory
 
-    $ cd DevGuideExamples/DCPS/Messenger
+    $ source setenv.sh 
 
-Now run
+  
+    $ cd /home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger
 
-    $ ./run_test.pl
 
-The result:
------------
+There are two ways to run this test.
 
-/home/cnc1/OpenDDS/bin/DCPSInfoRepo -ORBDebugLevel 1 -ORBLogFile DCPSInfoRepo.log -o repo.ior -DCPSPendingTimeout 3 
-InfoRepo PID: 4182
-/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger/subscriber  -ORBDebugLevel 1 -DCPSDebugLevel 4 -ORBVerboseLogging 1 -DCPSTransportDebugLevel 2 -ORBLogFile subscriber.log -DCPSPendingTimeout 3 
-subscriber PID: 4189 started at 2022-12-19 03:04:29
-/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger/publisher  -ORBDebugLevel 1 -DCPSDebugLevel 4 -ORBVerboseLogging 1 -DCPSTransportDebugLevel 2 -ORBLogFile publisher.log -DCPSPendingTimeout 3 
-publisher PID: 4190 started at 2022-12-19 03:04:29
+
+Using the OpenDDS specific InfoRepo discovery and TCP transports.
+This command has already been tested in a prior test and
+not used for this test.
+
+    $ perl run_test.pl  
+
+
+Using the standard RTPS discovery and transport.
+Testing with this command now.
+
+    $ perl run_test.pl --rtps 
+
+
+Results for  "perl run_test.pl --rtps"  are below:  test PASSED.
+--------------------------------------------------------------
+
+/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger/subscriber  -ORBDebugLevel 1 -DCPSConfigFile rtps.ini -DCPSDebugLevel 4 -ORBVerboseLogging 1 -DCPSTransportDebugLevel 2 -ORBLogFile subscriber.log -DCPSPendingTimeout 3 
+subscriber PID: 2884 started at 2022-12-19 11:45:30
+/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger/publisher  -ORBDebugLevel 1 -DCPSConfigFile rtps.ini -DCPSDebugLevel 4 -ORBVerboseLogging 1 -DCPSTransportDebugLevel 2 -ORBLogFile publisher.log -DCPSPendingTimeout 3 
+publisher PID: 2885 started at 2022-12-19 11:45:30
 SampleInfo.sample_rank = 0
 SampleInfo.instance_state = ALIVE_INSTANCE_STATE
 Message: subject    = Review
@@ -131,14 +147,6 @@ SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
 SampleInfo.sample_rank = 0
 SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
 SampleInfo.sample_rank = 0
-SampleInfo.instance_state = NOT_ALIVE_NO_WRITERS_INSTANCE_STATE
-INFO: /home/cnc1/OpenDDS/bin/DCPSInfoRepo being killed.
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
 test PASSED.
-
--------------------------------------------------------------------------------------------
-
-
- 
-
-
-
+------------------------------------------

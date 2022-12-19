@@ -1,0 +1,1265 @@
+Testing more - 12-19-2022
+
+-----------------------------------------------------------------
+    My folder location "/home/cnc1/OpenDDS" is only for my system
+    and will need to be changed to match other systems.
+
+    $  or # is used to indicate linux prompt type (normal or root)
+    in the terminal window and is not part of the command listed.
+
+    Example:
+        $  / normal prompt
+        #  / root prompt
+-----------------------------------------------------------------
+
+This example will use the:
+OpenDDS/DevGuideExamples/DCPS/Messenger/integration_run_test.pl
+
+
+Go to OpenDDS root folder and open terminal as below:
+Change location as required.
+----------------------------
+
+
+    $ cd /home/cnc1/OpenDDS
+
+
+Now set source using:
+
+
+    $ source setenv.sh 
+
+
+Change directory:
+
+  
+    $ cd /home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger
+
+
+Send command:
+
+
+    $ perl integration_run_test.pl  
+
+
+Results for  "integration_run_test.pl"  are below:
+--------------------------------------------------
+
+/home/cnc1/OpenDDS/bin/DCPSInfoRepo -ORBDebugLevel 1 -ORBVerboseLogging 1 -DCPSDebugLevel 2 -DCPSTransportDebugLevel 3 -DCPSDefaultAddress 127.0.0.1 -o repo.ior
+2022-12-19 12:16:02.320@LM_DEBUG@TAO (3178|3178) - Default_Resource_Factory - codeset manager=0x55e33d071c40
+2022-12-19 12:16:02.320@LM_DEBUG@TAO (3178|3178) - Loaded default protocol <IIOP_Factory>
+2022-12-19 12:16:02.497@LM_INFO@(3178|3178) INFO: set_DCPS_debug_level: set to 2
+2022-12-19 12:16:02.497@LM_NOTICE@(3178|3178) NOTICE: not using file configuration - no configuration file specified.
+2022-12-19 12:16:02.497@LM_INFO@(3178|3178) Service_Participant::get_domain_participant_factory: This is OpenDDS 3.23.0-dev using ACE 6.2a_p26
+2022-12-19 12:16:02.497@LM_INFO@(3178|3178) Service_Participant::get_domain_participant_factory: log_level: debug DCPS_debug_level: 2
+2022-12-19 12:16:02.497@LM_INFO@(3178|3178) Service_Participant::get_domain_participant_factory: machine: cnc1-OptiPlex-9020, x86_64 platform: Linux, 6.1.0-0-rt-amd64, #1 SMP PREEMPT_RT Debian 6.1~rc7-1~exp1 (2022-12-01)
+2022-12-19 12:16:02.497@LM_INFO@(3178|3178) Service_Participant::get_domain_participant_factory: compiler: g++ version 9.4.0
+2022-12-19 12:16:02.497@LM_NOTICE@(3178|3178) NOTICE: Service_Participant::intializeScheduling() - no scheduling policy specified, not setting policy.
+2022-12-19 12:16:02.498@LM_DEBUG@(3178|3178) Service_Participant::get_domain_participant_factory: Creating LinuxNetworkConfigMonitor
+2022-12-19 12:16:02.501@LM_DEBUG@(3178|3178) Service_Participant::set_repo_ior: Repo[DEFAULT_REPO] == IOR:010000001e00000049444c3a4f70656e4444532f444350532f44435053496e666f3a312e3000000001000000000000008c0000000101020013000000636e63312d4f707469506c65782d393032300000bdac00003400000014010f004e5550000000190000000001000000526f6f74504f4100496e666f5265706f000000000001000000496e666f5265706f020000000000000008000000014fa8aa004f41540100000018000000010000000100010001000000010001050901010000000000
+2022-12-19 12:16:02.502@LM_DEBUG@(3178|3178) [repository/DEFAULT_REPO]: RepositoryIor == IOR:010000001e00000049444c3a4f70656e4444532f444350532f44435053496e666f3a312e3000000001000000000000008c0000000101020013000000636e63312d4f707469506c65782d393032300000bdac00003400000014010f004e5550000000190000000001000000526f6f74504f4100496e666f5265706f000000000001000000496e666f5265706f020000000000000008000000014fa8aa004f41540100000018000000010000000100010001000000010001050901010000000000
+/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger/publisher -ORBDebugLevel 1 -ORBVerboseLogging 1 -DCPSDebugLevel 2 -DCPSTransportDebugLevel 3 -DCPSDefaultAddress 127.0.0.1
+/home/cnc1/OpenDDS/DevGuideExamples/DCPS/Messenger/subscriber -ORBDebugLevel 1 -ORBVerboseLogging 1 -DCPSDebugLevel 2 -DCPSTransportDebugLevel 3 -DCPSDefaultAddress 127.0.0.1
+2022-12-19 12:16:02.511@LM_INFO@(3185|3185) INFO: set_DCPS_debug_level: set to 2
+2022-12-19 12:16:02.511@LM_INFO@(3186|3186) INFO: set_DCPS_debug_level: set to 2
+2022-12-19 12:16:02.511@LM_NOTICE@(3186|3186) NOTICE: not using file configuration - no configuration file specified.
+2022-12-19 12:16:02.511@LM_NOTICE@(3185|3185) NOTICE: not using file configuration - no configuration file specified.
+2022-12-19 12:16:02.511@LM_INFO@(3186|3186) Service_Participant::get_domain_participant_factory: This is OpenDDS 3.23.0-dev using ACE 6.2a_p26
+2022-12-19 12:16:02.511@LM_INFO@(3185|3185) Service_Participant::get_domain_participant_factory: This is OpenDDS 3.23.0-dev using ACE 6.2a_p26
+2022-12-19 12:16:02.511@LM_INFO@(3186|3186) Service_Participant::get_domain_participant_factory: log_level: debug DCPS_debug_level: 2
+2022-12-19 12:16:02.511@LM_INFO@(3185|3185) Service_Participant::get_domain_participant_factory: log_level: debug DCPS_debug_level: 2
+2022-12-19 12:16:02.511@LM_INFO@(3186|3186) Service_Participant::get_domain_participant_factory: machine: cnc1-OptiPlex-9020, x86_64 platform: Linux, 6.1.0-0-rt-amd64, #1 SMP PREEMPT_RT Debian 6.1~rc7-1~exp1 (2022-12-01)
+2022-12-19 12:16:02.511@LM_INFO@(3185|3185) Service_Participant::get_domain_participant_factory: machine: cnc1-OptiPlex-9020, x86_64 platform: Linux, 6.1.0-0-rt-amd64, #1 SMP PREEMPT_RT Debian 6.1~rc7-1~exp1 (2022-12-01)
+2022-12-19 12:16:02.511@LM_INFO@(3186|3186) Service_Participant::get_domain_participant_factory: compiler: g++ version 9.4.0
+2022-12-19 12:16:02.511@LM_NOTICE@(3186|3186) NOTICE: Service_Participant::intializeScheduling() - no scheduling policy specified, not setting policy.
+2022-12-19 12:16:02.511@LM_INFO@(3185|3185) Service_Participant::get_domain_participant_factory: compiler: g++ version 9.4.0
+2022-12-19 12:16:02.511@LM_NOTICE@(3185|3185) NOTICE: Service_Participant::intializeScheduling() - no scheduling policy specified, not setting policy.
+2022-12-19 12:16:02.511@LM_DEBUG@(3185|3185) Service_Participant::get_domain_participant_factory: Creating LinuxNetworkConfigMonitor
+2022-12-19 12:16:02.511@LM_DEBUG@(3186|3186) Service_Participant::get_domain_participant_factory: Creating LinuxNetworkConfigMonitor
+2022-12-19 12:16:02.518@LM_DEBUG@(3186|3186) Service_Participant::set_repo_ior: Repo[DEFAULT_REPO] == file://repo.ior
+2022-12-19 12:16:02.518@LM_DEBUG@(3185|3185) Service_Participant::set_repo_ior: Repo[DEFAULT_REPO] == file://repo.ior
+2022-12-19 12:16:02.523@LM_DEBUG@(3186|3186) [repository/DEFAULT_REPO]: RepositoryIor == file://repo.ior
+2022-12-19 12:16:02.523@LM_DEBUG@(3185|3185) [repository/DEFAULT_REPO]: RepositoryIor == file://repo.ior
+2022-12-19 12:16:02.524@LM_DEBUG@TAO (3185|3185) - Default_Resource_Factory - codeset manager=0x557e631c6f30
+2022-12-19 12:16:02.524@LM_DEBUG@TAO (3186|3186) - Default_Resource_Factory - codeset manager=0x5574f619ff30
+2022-12-19 12:16:02.524@LM_DEBUG@TAO (3186|3186) - Loaded default protocol <IIOP_Factory>
+2022-12-19 12:16:02.524@LM_DEBUG@TAO (3185|3185) - Loaded default protocol <IIOP_Factory>
+2022-12-19 12:16:02.705@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: make_new_connection = 1 busy_count = 0
+2022-12-19 12:16:02.705@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: make_new_connection = 1 busy_count = 0
+2022-12-19 12:16:02.706@LM_DEBUG@TAO (3186|3190) - IIOP_Connection_Handler::open, IIOP connection to peer <127.0.1.1:44221> on 9
+2022-12-19 12:16:02.706@LM_DEBUG@TAO (3185|3189) - IIOP_Connection_Handler::open, IIOP connection to peer <127.0.1.1:44221> on 9
+2022-12-19 12:16:02.706@LM_DEBUG@TAO (3178|3178) - IIOP_Connection_Handler::open, IIOP connection to peer <127.0.0.1:36613> on 9
+2022-12-19 12:16:02.706@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.706@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.706@LM_DEBUG@TAO (3178|3178) - IIOP_Connection_Handler::open, IIOP connection to peer <127.0.0.1:48145> on 10
+2022-12-19 12:16:02.706@LM_DEBUG@(3178|3178) DCPS_IR_Domain::init_built_in_topics()  Initializing Built In Topics for domain 42
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_participant: added participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) in domain 42 at 0x3d0fd920.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DomainParticipantImpl::enable: enabled participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) in domain 42
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_description: added Topic Description 0x3d0fe5f0 in domain 42.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSParticipant added topic 01030000.65ccc678.00000001.000001c5(b94324f7) at 3d0fe750.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) successfully added topic 01030000.65ccc678.00000001.000001c5(b94324f7) at 0x3d0fe750.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000001.000001c5(b94324f7) at 0x3d0fe750.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_description: added Topic Description 0x3d0fef30 in domain 42.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSTopic added topic 01030000.65ccc678.00000001.000002c5(926e7734) at 3d0ff090.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) successfully added topic 01030000.65ccc678.00000001.000002c5(926e7734) at 0x3d0ff090.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000001.000002c5(926e7734) at 0x3d0ff090.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_description: added Topic Description 0x3d0ff8d0 in domain 42.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSSubscription added topic 01030000.65ccc678.00000001.000003c5(8b754675) at 3d0ffa50.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) successfully added topic 01030000.65ccc678.00000001.000003c5(8b754675) at 0x3d0ffa50.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000001.000003c5(8b754675) at 0x3d0ffa50.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_description: added Topic Description 0x3d1002b0 in domain 42.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSPublication added topic 01030000.65ccc678.00000001.000004c5(c434d0b2) at 3d100410.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) successfully added topic 01030000.65ccc678.00000001.000004c5(c434d0b2) at 0x3d100410.
+2022-12-19 12:16:02.707@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000001.000004c5(c434d0b2) at 0x3d100410.
+2022-12-19 12:16:02.708@LM_DEBUG@(3178|3178) WriteDataContainer sample_list_element_allocator 3d098248 with 20 chunks
+2022-12-19 12:16:02.708@LM_DEBUG@(3178|3178) DataWriterImpl::enable-mb Cached_Allocator_With_Overflow 3d098360 with 20 chunks
+2022-12-19 12:16:02.708@LM_DEBUG@(3178|3178) DataWriterImpl::enable-db Cached_Allocator_With_Overflow 3d1090f0 with 20 chunks
+2022-12-19 12:16:02.708@LM_DEBUG@(3178|3178) DataWriterImpl::enable-header Cached_Allocator_With_Overflow 3d109820 with 20 chunks
+2022-12-19 12:16:02.709@LM_DEBUG@(3178|3178) TcpTransport::configure_i overriding with DCPSDefaultAddress
+2022-12-19 12:16:02.709@LM_DEBUG@(3178|3178) TcpTransport::configure_i opening acceptor for 127.0.0.1:0 on 127.0.0.1:0
+2022-12-19 12:16:02.709@LM_DEBUG@(3178|3178) TcpTransport::configure_i listening on 127.0.0.1:36143
+2022-12-19 12:16:02.709@LM_DEBUG@(3178|3178) TransportImpl::open()
+   transport_type:               tcp
+   name:                         _OPENDDS_InfoRepoBITTCPTransportInst
+   queue_messages_per_pool:      10
+   queue_initial_pools:          5
+   max_packet_size:              2147481599
+   max_samples_per_packet:       10
+   optimum_packet_size:          4096
+   thread_per_connection:        false
+   datalink_release_delay:       0
+   datalink_control_chunks:      32
+   fragment_reassembly_timeout:  5:00.000
+   receive_preallocated_message_blocks:0
+   receive_preallocated_data_blocks:0
+   local_address:                127.0.0.1:36143
+   pub_address:                  
+   enable_nagle_algorithm:       false
+   conn_retry_initial_delay:     500
+   conn_retry_backoff_multiplier:2
+   conn_retry_attempts:          0
+   passive_reconnect_duration:   2000
+   max_output_pause_period:      -1
+   active_conn_timeout_period:   5000
+2022-12-19 12:16:02.709@LM_DEBUG@(3178|3178) TcpTransport public address string <127.0.0.1:36143>
+2022-12-19 12:16:02.709@LM_DEBUG@(3178|3178) WriterImpl::setup_serialization: Setup successfully with Unaligned CDR data representation.
+2022-12-19 12:16:02.709@LM_DEBUG@(3178|3178) DataWriterImpl::setup_serialization: sample size is unbounded, not using data allocator, always allocating from heap
+2022-12-19 12:16:02.711@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_publication: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) successfully added publication 01030000.65ccc678.00000001.000001c2(2727b154) at 0x3d1dfc50.
+2022-12-19 12:16:02.711@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_publication_reference: topic 01030000.65ccc678.00000001.000001c5(b94324f7) added publication 01030000.65ccc678.00000001.000001c2(2727b154) at 3d1dfc50
+2022-12-19 12:16:02.712@LM_WARNING@(3178|3178) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.712@LM_DEBUG@(3178|3178) DataWriterImpl::enable: got GUID 01030000.65ccc678.00000001.000001c2(2727b154), publishing to topic name "DCPSParticipant" type "PARTICIPANT_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.712@LM_DEBUG@(3178|3178) WriteDataContainer sample_list_element_allocator 3d0958e8 with 20 chunks
+2022-12-19 12:16:02.712@LM_DEBUG@(3178|3178) DataWriterImpl::enable-mb Cached_Allocator_With_Overflow 3d1cbc90 with 20 chunks
+2022-12-19 12:16:02.712@LM_DEBUG@(3178|3178) DataWriterImpl::enable-db Cached_Allocator_With_Overflow 3d22bf90 with 20 chunks
+2022-12-19 12:16:02.712@LM_DEBUG@(3178|3178) DataWriterImpl::enable-header Cached_Allocator_With_Overflow 3d22c6c0 with 20 chunks
+2022-12-19 12:16:02.712@LM_DEBUG@(3178|3178) TcpTransport public address string <127.0.0.1:36143>
+2022-12-19 12:16:02.712@LM_DEBUG@(3178|3178) WriterImpl::setup_serialization: Setup successfully with Unaligned CDR data representation.
+2022-12-19 12:16:02.712@LM_DEBUG@(3178|3178) DataWriterImpl::setup_serialization: sample size is unbounded, not using data allocator, always allocating from heap
+2022-12-19 12:16:02.712@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_publication: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) successfully added publication 01030000.65ccc678.00000001.000002c2(0c0ae297) at 0x3d22ebc0.
+2022-12-19 12:16:02.712@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_publication_reference: topic 01030000.65ccc678.00000001.000002c5(926e7734) added publication 01030000.65ccc678.00000001.000002c2(0c0ae297) at 3d22ebc0
+2022-12-19 12:16:02.713@LM_WARNING@(3178|3178) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.713@LM_DEBUG@(3178|3178) DataWriterImpl::enable: got GUID 01030000.65ccc678.00000001.000002c2(0c0ae297), publishing to topic name "DCPSTopic" type "TOPIC_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.713@LM_DEBUG@(3178|3178) WriteDataContainer sample_list_element_allocator 3d2726f8 with 20 chunks
+2022-12-19 12:16:02.713@LM_DEBUG@(3178|3178) DataWriterImpl::enable-mb Cached_Allocator_With_Overflow 3d22dc90 with 20 chunks
+2022-12-19 12:16:02.713@LM_DEBUG@(3178|3178) DataWriterImpl::enable-db Cached_Allocator_With_Overflow 3d27b0c0 with 20 chunks
+2022-12-19 12:16:02.713@LM_DEBUG@(3178|3178) DataWriterImpl::enable-header Cached_Allocator_With_Overflow 3d27b7f0 with 20 chunks
+2022-12-19 12:16:02.713@LM_DEBUG@(3178|3178) TcpTransport public address string <127.0.0.1:36143>
+2022-12-19 12:16:02.713@LM_DEBUG@(3178|3178) WriterImpl::setup_serialization: Setup successfully with Unaligned CDR data representation.
+2022-12-19 12:16:02.713@LM_DEBUG@(3178|3178) DataWriterImpl::setup_serialization: sample size is unbounded, not using data allocator, always allocating from heap
+2022-12-19 12:16:02.713@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_publication: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) successfully added publication 01030000.65ccc678.00000001.000003c2(1511d3d6) at 0x3d27de90.
+2022-12-19 12:16:02.713@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_publication_reference: topic 01030000.65ccc678.00000001.000003c5(8b754675) added publication 01030000.65ccc678.00000001.000003c2(1511d3d6) at 3d27de90
+2022-12-19 12:16:02.714@LM_WARNING@(3178|3178) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.714@LM_DEBUG@(3178|3178) DataWriterImpl::enable: got GUID 01030000.65ccc678.00000001.000003c2(1511d3d6), publishing to topic name "DCPSSubscription" type "SUBSCRIPTION_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.714@LM_DEBUG@(3178|3178) WriteDataContainer sample_list_element_allocator 3d2c31a8 with 20 chunks
+2022-12-19 12:16:02.714@LM_DEBUG@(3178|3178) DataWriterImpl::enable-mb Cached_Allocator_With_Overflow 3d27cf20 with 20 chunks
+2022-12-19 12:16:02.714@LM_DEBUG@(3178|3178) DataWriterImpl::enable-db Cached_Allocator_With_Overflow 3d2c1490 with 20 chunks
+2022-12-19 12:16:02.714@LM_DEBUG@(3178|3178) DataWriterImpl::enable-header Cached_Allocator_With_Overflow 3d2c1520 with 20 chunks
+2022-12-19 12:16:02.714@LM_DEBUG@(3178|3178) TcpTransport public address string <127.0.0.1:36143>
+2022-12-19 12:16:02.714@LM_DEBUG@(3178|3178) WriterImpl::setup_serialization: Setup successfully with Unaligned CDR data representation.
+2022-12-19 12:16:02.714@LM_DEBUG@(3178|3178) DataWriterImpl::setup_serialization: sample size is unbounded, not using data allocator, always allocating from heap
+2022-12-19 12:16:02.714@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_publication: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) successfully added publication 01030000.65ccc678.00000001.000004c2(5a504511) at 0x3d2cd040.
+2022-12-19 12:16:02.714@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_publication_reference: topic 01030000.65ccc678.00000001.000004c5(c434d0b2) added publication 01030000.65ccc678.00000001.000004c2(5a504511) at 3d2cd040
+2022-12-19 12:16:02.715@LM_WARNING@(3178|3178) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.715@LM_DEBUG@(3178|3178) DataWriterImpl::enable: got GUID 01030000.65ccc678.00000001.000004c2(5a504511), publishing to topic name "DCPSPublication" type "PUBLICATION_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.715@LM_DEBUG@(3178|3178) TAO_DDS_DCPSInfo_i::domain: successfully loaded domain 42 at 3d0ce030.
+2022-12-19 12:16:02.715@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d104de8
+2022-12-19 12:16:02.715@LM_DEBUG@(3178|3178) DCPS_IR_Domain::publish_participant_bit: 01030000.65ccc678.00000002.000001c1(f98e9a3e), handle 2.
+2022-12-19 12:16:02.715@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d104de8
+2022-12-19 12:16:02.715@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_participant: added participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) in domain 42 at 0x3d310820.
+2022-12-19 12:16:02.715@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d104c90
+2022-12-19 12:16:02.715@LM_DEBUG@(3178|3178) DCPS_IR_Domain::publish_participant_bit: 01030000.65ccc678.00000003.000001c1(c4eeb38e), handle 3.
+2022-12-19 12:16:02.715@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d104c90
+2022-12-19 12:16:02.715@LM_DEBUG@(3186|3186) DomainParticipantImpl::enable: enabled participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) in domain 42
+2022-12-19 12:16:02.715@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_participant: added participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) in domain 42 at 0x3d311740.
+2022-12-19 12:16:02.716@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.716@LM_DEBUG@(3185|3185) DomainParticipantImpl::enable: enabled participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) in domain 42
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description DCPSParticipant/PARTICIPANT_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSParticipant added topic 01030000.65ccc678.00000002.000001c5(fee35e27) at 3d310370.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added topic 01030000.65ccc678.00000002.000001c5(fee35e27) at 0x3d310370.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000002.000001c5(fee35e27) at 0x3d310370.
+2022-12-19 12:16:02.716@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description DCPSParticipant/PARTICIPANT_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSParticipant added topic 01030000.65ccc678.00000003.000001c5(c3837797) at 3d30fb70.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added topic 01030000.65ccc678.00000003.000001c5(c3837797) at 0x3d30fb70.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000003.000001c5(c3837797) at 0x3d30fb70.
+2022-12-19 12:16:02.716@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.716@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_description: added Topic Description 0x3d310290 in domain 42.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description OpenDDSParticipantLocation added topic 01030000.65ccc678.00000002.000002c5(d5ce0de4) at 3d310050.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added topic 01030000.65ccc678.00000002.000002c5(d5ce0de4) at 0x3d310050.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000002.000002c5(d5ce0de4) at 0x3d310050.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description OpenDDSParticipantLocation/PARTICIPANT_LOCATION_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description OpenDDSParticipantLocation added topic 01030000.65ccc678.00000003.000002c5(e8ae2454) at 3d310e20.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added topic 01030000.65ccc678.00000003.000002c5(e8ae2454) at 0x3d310e20.
+2022-12-19 12:16:02.716@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000003.000002c5(e8ae2454) at 0x3d310e20.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_description: added Topic Description 0x3d311ab0 in domain 42.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description OpenDDSInternalThread added topic 01030000.65ccc678.00000002.000003c5(ccd53ca5) at 3d311bb0.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added topic 01030000.65ccc678.00000002.000003c5(ccd53ca5) at 0x3d311bb0.
+2022-12-19 12:16:02.716@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000002.000003c5(ccd53ca5) at 0x3d311bb0.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description OpenDDSInternalThread/INTERNAL_THREAD_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description OpenDDSInternalThread added topic 01030000.65ccc678.00000003.000003c5(f1b51515) at 3d311df0.
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added topic 01030000.65ccc678.00000003.000003c5(f1b51515) at 0x3d311df0.
+2022-12-19 12:16:02.716@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.716@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000003.000003c5(f1b51515) at 0x3d311df0.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_description: added Topic Description 0x3d312010 in domain 42.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description OpenDDSConnectionRecord added topic 01030000.65ccc678.00000002.000004c5(8394aa62) at 3d312110.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added topic 01030000.65ccc678.00000002.000004c5(8394aa62) at 0x3d312110.
+2022-12-19 12:16:02.717@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000002.000004c5(8394aa62) at 0x3d312110.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description OpenDDSConnectionRecord/CONNECTION_RECORD_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description OpenDDSConnectionRecord added topic 01030000.65ccc678.00000003.000004c5(bef483d2) at 3d3123d0.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added topic 01030000.65ccc678.00000003.000004c5(bef483d2) at 0x3d3123d0.
+2022-12-19 12:16:02.717@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000003.000004c5(bef483d2) at 0x3d3123d0.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description DCPSTopic/TOPIC_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSTopic added topic 01030000.65ccc678.00000002.000005c5(9a8f9b23) at 3d3125f0.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added topic 01030000.65ccc678.00000002.000005c5(9a8f9b23) at 0x3d3125f0.
+2022-12-19 12:16:02.717@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000002.000005c5(9a8f9b23) at 0x3d3125f0.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description DCPSTopic/TOPIC_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSTopic added topic 01030000.65ccc678.00000003.000005c5(a7efb293) at 3d3127f0.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added topic 01030000.65ccc678.00000003.000005c5(a7efb293) at 0x3d3127f0.
+2022-12-19 12:16:02.717@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000003.000005c5(a7efb293) at 0x3d3127f0.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description DCPSSubscription/SUBSCRIPTION_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSSubscription added topic 01030000.65ccc678.00000002.000006c5(b1a2c8e0) at 3d312a30.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added topic 01030000.65ccc678.00000002.000006c5(b1a2c8e0) at 0x3d312a30.
+2022-12-19 12:16:02.717@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000002.000006c5(b1a2c8e0) at 0x3d312a30.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description DCPSSubscription/SUBSCRIPTION_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSSubscription added topic 01030000.65ccc678.00000003.000006c5(8cc2e150) at 3d312c50.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added topic 01030000.65ccc678.00000003.000006c5(8cc2e150) at 0x3d312c50.
+2022-12-19 12:16:02.717@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000003.000006c5(8cc2e150) at 0x3d312c50.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description DCPSPublication/PUBLICATION_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSPublication added topic 01030000.65ccc678.00000002.000007c5(a8b9f9a1) at 3d312e70.
+2022-12-19 12:16:02.717@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added topic 01030000.65ccc678.00000002.000007c5(a8b9f9a1) at 0x3d312e70.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000002.000007c5(a8b9f9a1) at 0x3d312e70.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description DCPSPublication/PUBLICATION_BUILT_IN_TOPIC_TYPE in domain 42.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description DCPSPublication added topic 01030000.65ccc678.00000003.000007c5(95d9d011) at 3d313070.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added topic 01030000.65ccc678.00000003.000007c5(95d9d011) at 0x3d313070.
+2022-12-19 12:16:02.717@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000003.000007c5(95d9d011) at 0x3d313070.
+2022-12-19 12:16:02.718@LM_INFO@(3185|3185) InfoRepoDiscovery::bit_config - BIT tcp transport :0
+2022-12-19 12:16:02.718@LM_INFO@(3186|3186) InfoRepoDiscovery::bit_config - BIT tcp transport :0
+2022-12-19 12:16:02.718@LM_DEBUG@(3185|3185) DDS::ParticipantBuiltinTopicDataDataReaderImpl::enable_specific-data Cached_Allocator_With_Overflow 631e1290 with 20 chunks
+2022-12-19 12:16:02.718@LM_DEBUG@(3186|3186) DDS::ParticipantBuiltinTopicDataDataReaderImpl::enable_specific-data Cached_Allocator_With_Overflow f61ba290 with 20 chunks
+2022-12-19 12:16:02.718@LM_DEBUG@(3185|3185) DataReaderImpl::enable Cached_Allocator_With_Overflow 63209380 with 20 chunks
+2022-12-19 12:16:02.718@LM_DEBUG@(3186|3186) DataReaderImpl::enable Cached_Allocator_With_Overflow f61e2380 with 20 chunks
+2022-12-19 12:16:02.719@LM_DEBUG@(3185|3185) TcpTransport::configure_i overriding with DCPSDefaultAddress
+2022-12-19 12:16:02.719@LM_DEBUG@(3186|3186) TcpTransport::configure_i overriding with DCPSDefaultAddress
+2022-12-19 12:16:02.719@LM_DEBUG@(3185|3185) TcpTransport::configure_i opening acceptor for 127.0.0.1:0 on 127.0.0.1:0
+2022-12-19 12:16:02.719@LM_DEBUG@(3186|3186) TcpTransport::configure_i opening acceptor for 127.0.0.1:0 on 127.0.0.1:0
+2022-12-19 12:16:02.719@LM_DEBUG@(3185|3185) TcpTransport::configure_i listening on 127.0.0.1:43217
+2022-12-19 12:16:02.719@LM_DEBUG@(3186|3186) TcpTransport::configure_i listening on 127.0.0.1:40703
+2022-12-19 12:16:02.719@LM_DEBUG@(3185|3185) TransportImpl::open()
+   transport_type:               tcp
+   name:                         _OPENDDS__BITTCPTransportInst_DEFAULT_REPO
+   queue_messages_per_pool:      10
+   queue_initial_pools:          5
+   max_packet_size:              2147481599
+   max_samples_per_packet:       10
+   optimum_packet_size:          4096
+   thread_per_connection:        false
+   datalink_release_delay:       0
+   datalink_control_chunks:      32
+   fragment_reassembly_timeout:  5:00.000
+   receive_preallocated_message_blocks:0
+   receive_preallocated_data_blocks:0
+   local_address:                127.0.0.1:43217
+   pub_address:                  
+   enable_nagle_algorithm:       false
+   conn_retry_initial_delay:     500
+   conn_retry_backoff_multiplier:2
+   conn_retry_attempts:          3
+   passive_reconnect_duration:   2000
+   max_output_pause_period:      -1
+   active_conn_timeout_period:   5000
+2022-12-19 12:16:02.719@LM_DEBUG@(3186|3186) TransportImpl::open()
+   transport_type:               tcp
+   name:                         _OPENDDS__BITTCPTransportInst_DEFAULT_REPO
+   queue_messages_per_pool:      10
+   queue_initial_pools:          5
+   max_packet_size:              2147481599
+   max_samples_per_packet:       10
+   optimum_packet_size:          4096
+   thread_per_connection:        false
+   datalink_release_delay:       0
+   datalink_control_chunks:      32
+   fragment_reassembly_timeout:  5:00.000
+   receive_preallocated_message_blocks:0
+   receive_preallocated_data_blocks:0
+   local_address:                127.0.0.1:40703
+   pub_address:                  
+   enable_nagle_algorithm:       false
+   conn_retry_initial_delay:     500
+   conn_retry_backoff_multiplier:2
+   conn_retry_attempts:          3
+   passive_reconnect_duration:   2000
+   max_output_pause_period:      -1
+   active_conn_timeout_period:   5000
+2022-12-19 12:16:02.719@LM_DEBUG@(3185|3185) TcpTransport public address string <127.0.0.1:43217>
+2022-12-19 12:16:02.719@LM_DEBUG@(3186|3186) TcpTransport public address string <127.0.0.1:40703>
+2022-12-19 12:16:02.719@LM_DEBUG@(3185|3185) DataReaderImpl::setup_deserialization: Setup successfully with the following data representations: CDR/XCDR1, XCDR2, Unaligned CDR
+2022-12-19 12:16:02.719@LM_DEBUG@(3186|3186) DataReaderImpl::setup_deserialization: Setup successfully with the following data representations: CDR/XCDR1, XCDR2, Unaligned CDR
+2022-12-19 12:16:02.722@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.722@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.890@LM_DEBUG@TAO (3178|3178) - IIOP_Connection_Handler::process_listen_point_list, Listening port [40871] on [cnc1-OptiPlex-9020]
+2022-12-19 12:16:02.890@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_subscription: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b) at 0x3d313370.
+2022-12-19 12:16:02.890@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_subscription_reference: topic 01030000.65ccc678.00000002.000001c5(fee35e27) added subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b) at 3d313370.
+2022-12-19 12:16:02.890@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::try_associate: topic description DCPSParticipant checking compatibility of publication 01030000.65ccc678.00000001.000001c2(2727b154) with subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b).
+2022-12-19 12:16:02.890@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::associate: topic description DCPSParticipant associating publication 01030000.65ccc678.00000001.000001c2(2727b154) with subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b).
+2022-12-19 12:16:02.890@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: publication 01030000.65ccc678.00000001.000001c2(2727b154) adding subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b).
+2022-12-19 12:16:02.890@LM_DEBUG@(3178|3178) DataWriterRemoteImpl::add_association - local 01030000.65ccc678.00000001.000001c2(2727b154) remote 01030000.65ccc678.00000002.000001c7(10ed3f0b)
+2022-12-19 12:16:02.890@LM_DEBUG@(3178|3178) DataWriterImpl::add_association - bit 1 local 01030000.65ccc678.00000001.000001c2(2727b154) remote 01030000.65ccc678.00000002.000001c7(10ed3f0b)
+2022-12-19 12:16:02.890@LM_DEBUG@(3178|3178) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000001.000001c2(2727b154) and remote 01030000.65ccc678.00000002.000001c7(10ed3f0b)
+2022-12-19 12:16:02.890@LM_DEBUG@(3178|3178) PendingAssoc::initiate_connect - between 01030000.65ccc678.00000001.000001c2(2727b154) and remote 01030000.65ccc678.00000002.000001c7(10ed3f0b)
+2022-12-19 12:16:02.890@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - attempt to connect_datalink between local 01030000.65ccc678.00000001.000001c2(2727b154) and remote 01030000.65ccc678.00000002.000001c7(10ed3f0b)
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3178) NetworkResource::to_addr() - Resolving address for 127.0.0.1:40703 to be 127.0.0.1
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink PriorityKey prio=0, addr=127.0.0.1:40703, is_loopback=0, is_active=1
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink create new link[0x55e33d3142b0]
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink pending.
+2022-12-19 12:16:02.891@LM_DEBUG@(3186|3195) DBG:   TcpConnection::passive_open.
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - connection between local 01030000.65ccc678.00000001.000001c2(2727b154) and remote 01030000.65ccc678.00000002.000001c7(10ed3f0b) initiation successful
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3178) PendingAssoc::intiate_connect - resulting link from initiate_connect_i (local: 01030000.65ccc678.00000001.000001c2(2727b154) to remote: 01030000.65ccc678.00000002.000001c7(10ed3f0b)) was nil
+2022-12-19 12:16:02.891@LM_DEBUG@(3186|3195) DBG:   TcpConnection::open passive handle=15.
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3192) DBG:   TcpConnection::active_open.
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: successfully added subscription 3d313370.
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3192) TcpConnection::on_active_connection_established: Sending public address <127.0.0.1:36143> to remote side
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b) adding publication 01030000.65ccc678.00000001.000001c2(2727b154).
+2022-12-19 12:16:02.891@LM_DEBUG@(3186|3195) NetworkResource::to_addr() - Resolving address for 127.0.0.1:36143 to be 127.0.0.1
+2022-12-19 12:16:02.891@LM_DEBUG@(3186|3195) TcpTransport::passive_connection() - established with 127.0.0.1:36143.
+2022-12-19 12:16:02.891@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: successfully added publication 3d1dfc50
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3192) TransportReceiveStrategy-mb Cached_Allocator_With_Overflow 0x7f68880050e8 with 1000 chunks
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_subscription_reference: topic description DCPSParticipant added subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b) at 3d313370
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3192) TransportReceiveStrategy-db Cached_Allocator_With_Overflow 0x7f6888005170 with 100 chunks
+2022-12-19 12:16:02.891@LM_DEBUG@(3178|3192) TransportReceiveStrategy-data Cached_Allocator_With_Overflow 0x7f68880051f8 with 32 chunks
+2022-12-19 12:16:02.891@LM_DEBUG@(3186|3190) DataReaderRemoteImpl::add_association - local 01030000.65ccc678.00000002.000001c7(10ed3f0b) remote 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.891@LM_DEBUG@TAO (3178|3178) - IIOP_Connection_Handler::process_listen_point_list, Listening port [36719] on [cnc1-OptiPlex-9020]
+2022-12-19 12:16:02.891@LM_DEBUG@(3186|3190) DataReaderImpl::add_association - bit 1 local 01030000.65ccc678.00000002.000001c7(10ed3f0b) remote 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_subscription: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb) at 0x3d316ac0.
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_subscription_reference: topic 01030000.65ccc678.00000003.000001c5(c3837797) added subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb) at 3d316ac0.
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3190) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000002.000001c7(10ed3f0b) and remote 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::try_associate: topic description DCPSParticipant checking compatibility of publication 01030000.65ccc678.00000001.000001c2(2727b154) with subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb).
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3190) NetworkResource::to_addr() - Resolving address for 127.0.0.1:36143 to be 127.0.0.1
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::associate: topic description DCPSParticipant associating publication 01030000.65ccc678.00000001.000001c2(2727b154) with subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb).
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: publication 01030000.65ccc678.00000001.000001c2(2727b154) adding subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb).
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink create new link[0x7fd4b4005ad0]
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DataWriterRemoteImpl::add_association - local 01030000.65ccc678.00000001.000001c2(2727b154) remote 01030000.65ccc678.00000003.000001c7(2d8d16bb)
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DataWriterImpl::add_association - bit 1 local 01030000.65ccc678.00000001.000001c2(2727b154) remote 01030000.65ccc678.00000003.000001c7(2d8d16bb)
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000001.000001c2(2727b154) and remote 01030000.65ccc678.00000003.000001c7(2d8d16bb)
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) PendingAssoc::initiate_connect - between 01030000.65ccc678.00000001.000001c2(2727b154) and remote 01030000.65ccc678.00000003.000001c7(2d8d16bb)
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - attempt to connect_datalink between local 01030000.65ccc678.00000001.000001c2(2727b154) and remote 01030000.65ccc678.00000003.000001c7(2d8d16bb)
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) NetworkResource::to_addr() - Resolving address for 127.0.0.1:43217 to be 127.0.0.1
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink PriorityKey prio=0, addr=127.0.0.1:43217, is_loopback=0, is_active=1
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink create new link[0x55e33d317330]
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink pending.
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3190) TransportReceiveStrategy-mb Cached_Allocator_With_Overflow 0x7fd4b4009988 with 1000 chunks
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - connection between local 01030000.65ccc678.00000001.000001c2(2727b154) and remote 01030000.65ccc678.00000003.000001c7(2d8d16bb) initiation successful
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) PendingAssoc::intiate_connect - resulting link from initiate_connect_i (local: 01030000.65ccc678.00000001.000001c2(2727b154) to remote: 01030000.65ccc678.00000003.000001c7(2d8d16bb)) was nil
+2022-12-19 12:16:02.892@LM_WARNING@(3186|3186) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.892@LM_DEBUG@(3185|3196) DBG:   TcpConnection::passive_open.
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3190) TransportReceiveStrategy-db Cached_Allocator_With_Overflow 0x7fd4b4009a10 with 100 chunks
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: successfully added subscription 3d316ac0.
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3190) TransportReceiveStrategy-data Cached_Allocator_With_Overflow 0x7fd4b4009a98 with 32 chunks
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3186) DataReaderImpl::enable: got GUID 01030000.65ccc678.00000002.000001c7(10ed3f0b), subscribed to topic name "DCPSParticipant" type "PARTICIPANT_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb) adding publication 01030000.65ccc678.00000001.000001c2(2727b154).
+2022-12-19 12:16:02.892@LM_DEBUG@(3185|3196) DBG:   TcpConnection::open passive handle=15.
+2022-12-19 12:16:02.892@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [10] busy_count = 0
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3190) TransportClient::use_datalink_i TransportClient(0x5574f61df968) using datalink[0x7fd4b4005ad0] from 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3190) TransportClient::use_datalink_i TransportClient(0x5574f61df968) about to add_link[0x7fd4b4005ad0] to remote: 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3186) DDS::TopicBuiltinTopicDataDataReaderImpl::enable_specific-data Cached_Allocator_With_Overflow f62a5b40 with 20 chunks
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3186) DataReaderImpl::enable Cached_Allocator_With_Overflow f6302720 with 20 chunks
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: successfully added publication 3d1dfc50
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_subscription_reference: topic description DCPSParticipant added subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb) at 3d316ac0
+2022-12-19 12:16:02.892@LM_INFO@(3186|3188) EndHistoricSamplesMissedSweeper::ScheduleCommand::execute() - sweeper 0x7fd4b40052f0 is now scheduled
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3186) TcpTransport public address string <127.0.0.1:40703>
+2022-12-19 12:16:02.892@LM_DEBUG@(3186|3186) DataReaderImpl::setup_deserialization: Setup successfully with the following data representations: CDR/XCDR1, XCDR2, Unaligned CDR
+2022-12-19 12:16:02.892@LM_DEBUG@TAO (3185|3189) - Transport[9]::handle_input_parse_data, notify reactor
+2022-12-19 12:16:02.892@LM_DEBUG@TAO (3185|3189) - Transport[9]::notify_reactor, notify to Reactor
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3192) DBG:   TcpConnection::active_open.
+2022-12-19 12:16:02.892@LM_DEBUG@(3178|3192) TcpConnection::on_active_connection_established: Sending public address <127.0.0.1:36143> to remote side
+2022-12-19 12:16:02.892@LM_DEBUG@(3185|3189) DataReaderRemoteImpl::add_association - local 01030000.65ccc678.00000003.000001c7(2d8d16bb) remote 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.893@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink connected link 0x7fd4b4005ad0.
+2022-12-19 12:16:02.893@LM_DEBUG@(3185|3189) DataReaderImpl::add_association - bit 1 local 01030000.65ccc678.00000003.000001c7(2d8d16bb) remote 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3192) TransportReceiveStrategy-mb Cached_Allocator_With_Overflow 0x7f688801db48 with 1000 chunks
+2022-12-19 12:16:02.893@LM_DEBUG@(3185|3196) NetworkResource::to_addr() - Resolving address for 127.0.0.1:36143 to be 127.0.0.1
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3192) TransportReceiveStrategy-db Cached_Allocator_With_Overflow 0x7f688801dbd0 with 100 chunks
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3192) TransportReceiveStrategy-data Cached_Allocator_With_Overflow 0x7f688801dc58 with 32 chunks
+2022-12-19 12:16:02.893@LM_DEBUG@(3185|3196) TcpTransport::passive_connection() - established with 127.0.0.1:36143.
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d100e90) using datalink[0x55e33d3142b0] from 01030000.65ccc678.00000002.000001c7(10ed3f0b)
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d100e90) about to add_link[0x55e33d3142b0] to remote: 01030000.65ccc678.00000002.000001c7(10ed3f0b)
+2022-12-19 12:16:02.893@LM_WARNING@(3185|3185) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.893@LM_INFO@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000001c2(2727b154) succeeded in associating with reader 01030000.65ccc678.00000002.000001c7(10ed3f0b)
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000001c2(2727b154) reader 01030000.65ccc678.00000002.000001c7(10ed3f0b) calling association_complete_i
+2022-12-19 12:16:02.893@LM_DEBUG@(3185|3185) DataReaderImpl::enable: got GUID 01030000.65ccc678.00000003.000001c7(2d8d16bb), subscribed to topic name "DCPSParticipant" type "PARTICIPANT_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3192) DataWriterImpl::association_complete_i - bit 1 local 01030000.65ccc678.00000001.000001c2(2727b154) remote 01030000.65ccc678.00000002.000001c7(10ed3f0b)
+2022-12-19 12:16:02.892@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_subscription: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8) at 0x3d3198e0.
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3192) WriteDataContainer::data_delivered 0x55e33d1049e0
+2022-12-19 12:16:02.893@LM_DEBUG@(3185|3189) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000003.000001c7(2d8d16bb) and remote 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_subscription_reference: topic 01030000.65ccc678.00000002.000005c5(9a8f9b23) added subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8) at 3d3198e0.
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::try_associate: topic description DCPSTopic checking compatibility of publication 01030000.65ccc678.00000001.000002c2(0c0ae297) with subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8).
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3192) WriteDataContainer::data_delivered 0x55e33d104b38
+2022-12-19 12:16:02.893@LM_DEBUG@(3185|3189) NetworkResource::to_addr() - Resolving address for 127.0.0.1:36143 to be 127.0.0.1
+2022-12-19 12:16:02.893@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::associate: topic description DCPSTopic associating publication 01030000.65ccc678.00000001.000002c2(0c0ae297) with subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8).
+2022-12-19 12:16:02.894@LM_DEBUG@(3185|3189) TcpTransport::accept_datalink PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: publication 01030000.65ccc678.00000001.000002c2(0c0ae297) adding subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8).
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) DataWriterRemoteImpl::add_association - local 01030000.65ccc678.00000001.000002c2(0c0ae297) remote 01030000.65ccc678.00000002.000002c7(3bc06cc8)
+2022-12-19 12:16:02.894@LM_DEBUG@(3185|3189) TcpTransport::accept_datalink create new link[0x7f3570005ad0]
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) DataWriterImpl::add_association - bit 1 local 01030000.65ccc678.00000001.000002c2(0c0ae297) remote 01030000.65ccc678.00000002.000002c7(3bc06cc8)
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000001.000002c2(0c0ae297) and remote 01030000.65ccc678.00000002.000002c7(3bc06cc8)
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) PendingAssoc::initiate_connect - between 01030000.65ccc678.00000001.000002c2(0c0ae297) and remote 01030000.65ccc678.00000002.000002c7(3bc06cc8)
+2022-12-19 12:16:02.894@LM_INFO@(3186|3188) EndHistoricSamplesMissedSweeper::CancelCommand::execute() - sweeper 0x7fd4b40052f0 is no longer scheduled
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - attempt to connect_datalink between local 01030000.65ccc678.00000001.000002c2(0c0ae297) and remote 01030000.65ccc678.00000002.000002c7(3bc06cc8)
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) NetworkResource::to_addr() - Resolving address for 127.0.0.1:40703 to be 127.0.0.1
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink PriorityKey prio=0, addr=127.0.0.1:40703, is_loopback=0, is_active=1
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink found datalink link[0x55e33d3142b0]
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - connection between local 01030000.65ccc678.00000001.000002c2(0c0ae297) and remote 01030000.65ccc678.00000002.000002c7(3bc06cc8) initiation successful
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) PendingAssoc::intiate_connect - resulting link from initiate_connect_i (local: 01030000.65ccc678.00000001.000002c2(0c0ae297) to remote: 01030000.65ccc678.00000002.000002c7(3bc06cc8)) was nil
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: successfully added subscription 3d3198e0.
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8) adding publication 01030000.65ccc678.00000001.000002c2(0c0ae297).
+2022-12-19 12:16:02.894@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.894@LM_DEBUG@(3185|3189) TransportReceiveStrategy-mb Cached_Allocator_With_Overflow 0x7f3570009988 with 1000 chunks
+2022-12-19 12:16:02.894@LM_DEBUG@(3185|3189) TransportReceiveStrategy-db Cached_Allocator_With_Overflow 0x7f3570009a10 with 100 chunks
+2022-12-19 12:16:02.894@LM_DEBUG@(3185|3189) TransportReceiveStrategy-data Cached_Allocator_With_Overflow 0x7f3570009a98 with 32 chunks
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: successfully added publication 3d22ebc0
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_subscription_reference: topic description DCPSTopic added subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8) at 3d3198e0
+2022-12-19 12:16:02.894@LM_DEBUG@(3186|3190) DataReaderRemoteImpl::add_association - local 01030000.65ccc678.00000002.000002c7(3bc06cc8) remote 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.894@LM_DEBUG@(3186|3190) DataReaderImpl::add_association - bit 1 local 01030000.65ccc678.00000002.000002c7(3bc06cc8) remote 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.894@LM_DEBUG@(3186|3190) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000002.000002c7(3bc06cc8) and remote 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.894@LM_DEBUG@(3186|3190) NetworkResource::to_addr() - Resolving address for 127.0.0.1:36143 to be 127.0.0.1
+2022-12-19 12:16:02.894@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.894@LM_DEBUG@(3185|3185) DDS::TopicBuiltinTopicDataDataReaderImpl::enable_specific-data Cached_Allocator_With_Overflow 632ccb40 with 20 chunks
+2022-12-19 12:16:02.894@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink found datalink link[0x7fd4b4005ad0]
+2022-12-19 12:16:02.894@LM_DEBUG@(3186|3190) TransportClient::use_datalink_i TransportClient(0x5574f62ff608) using datalink[0x7fd4b4005ad0] from 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.894@LM_DEBUG@(3186|3190) TransportClient::use_datalink_i TransportClient(0x5574f62ff608) about to add_link[0x7fd4b4005ad0] to remote: 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.894@LM_INFO@(3186|3188) EndHistoricSamplesMissedSweeper::ScheduleCommand::execute() - sweeper 0x7fd4b4020510 is now scheduled
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d223c10) using datalink[0x55e33d3142b0] from 01030000.65ccc678.00000002.000002c7(3bc06cc8)
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d223c10) about to add_link[0x55e33d3142b0] to remote: 01030000.65ccc678.00000002.000002c7(3bc06cc8)
+2022-12-19 12:16:02.894@LM_INFO@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000002c2(0c0ae297) succeeded in associating with reader 01030000.65ccc678.00000002.000002c7(3bc06cc8)
+2022-12-19 12:16:02.894@LM_DEBUG@(3185|3189) TransportClient::use_datalink_i TransportClient(0x557e63206968) using datalink[0x7f3570005ad0] from 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000002c2(0c0ae297) reader 01030000.65ccc678.00000002.000002c7(3bc06cc8) calling association_complete_i
+2022-12-19 12:16:02.894@LM_DEBUG@(3185|3189) TransportClient::use_datalink_i TransportClient(0x557e63206968) about to add_link[0x7f3570005ad0] to remote: 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.894@LM_DEBUG@(3178|3192) DataWriterImpl::association_complete_i - bit 1 local 01030000.65ccc678.00000001.000002c2(0c0ae297) remote 01030000.65ccc678.00000002.000002c7(3bc06cc8)
+2022-12-19 12:16:02.895@LM_INFO@(3185|3187) EndHistoricSamplesMissedSweeper::ScheduleCommand::execute() - sweeper 0x7f35700052f0 is now scheduled
+2022-12-19 12:16:02.895@LM_WARNING@(3186|3186) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d100e90) using datalink[0x55e33d317330] from 01030000.65ccc678.00000003.000001c7(2d8d16bb)
+2022-12-19 12:16:02.895@LM_DEBUG@(3186|3186) DataReaderImpl::enable: got GUID 01030000.65ccc678.00000002.000002c7(3bc06cc8), subscribed to topic name "DCPSTopic" type "TOPIC_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d100e90) about to add_link[0x55e33d317330] to remote: 01030000.65ccc678.00000003.000001c7(2d8d16bb)
+2022-12-19 12:16:02.895@LM_INFO@(3186|3188) EndHistoricSamplesMissedSweeper::CancelCommand::execute() - sweeper 0x7fd4b4020510 is no longer scheduled
+2022-12-19 12:16:02.895@LM_DEBUG@(3185|3189) TcpTransport::accept_datalink connected link 0x7f3570005ad0.
+2022-12-19 12:16:02.895@LM_INFO@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000001c2(2727b154) succeeded in associating with reader 01030000.65ccc678.00000003.000001c7(2d8d16bb)
+2022-12-19 12:16:02.895@LM_DEBUG@(3186|3186) DDS::PublicationBuiltinTopicDataDataReaderImpl::enable_specific-data Cached_Allocator_With_Overflow f63041b0 with 20 chunks
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000001c2(2727b154) reader 01030000.65ccc678.00000003.000001c7(2d8d16bb) calling association_complete_i
+2022-12-19 12:16:02.895@LM_DEBUG@(3186|3186) DataReaderImpl::enable Cached_Allocator_With_Overflow f634cbc0 with 20 chunks
+2022-12-19 12:16:02.894@LM_DEBUG@(3185|3185) DataReaderImpl::enable Cached_Allocator_With_Overflow 63329720 with 20 chunks
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3192) DataWriterImpl::association_complete_i - bit 1 local 01030000.65ccc678.00000001.000001c2(2727b154) remote 01030000.65ccc678.00000003.000001c7(2d8d16bb)
+2022-12-19 12:16:02.895@LM_DEBUG@(3186|3186) TcpTransport public address string <127.0.0.1:40703>
+2022-12-19 12:16:02.895@LM_DEBUG@(3185|3185) TcpTransport public address string <127.0.0.1:43217>
+2022-12-19 12:16:02.895@LM_DEBUG@(3186|3186) DataReaderImpl::setup_deserialization: Setup successfully with the following data representations: CDR/XCDR1, XCDR2, Unaligned CDR
+2022-12-19 12:16:02.895@LM_DEBUG@(3185|3185) DataReaderImpl::setup_deserialization: Setup successfully with the following data representations: CDR/XCDR1, XCDR2, Unaligned CDR
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3192) WriteDataContainer::data_delivered 0x55e33d1049e0
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3192) WriteDataContainer::data_delivered 0x55e33d104b38
+2022-12-19 12:16:02.895@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.895@LM_INFO@(3185|3187) EndHistoricSamplesMissedSweeper::CancelCommand::execute() - sweeper 0x7f35700052f0 is no longer scheduled
+2022-12-19 12:16:02.895@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_subscription: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added subscription 01030000.65ccc678.00000002.000003c7(22db5d89) at 0x3d31b800.
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_subscription_reference: topic 01030000.65ccc678.00000002.000007c5(a8b9f9a1) added subscription 01030000.65ccc678.00000002.000003c7(22db5d89) at 3d31b800.
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::try_associate: topic description DCPSPublication checking compatibility of publication 01030000.65ccc678.00000001.000004c2(5a504511) with subscription 01030000.65ccc678.00000002.000003c7(22db5d89).
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::associate: topic description DCPSPublication associating publication 01030000.65ccc678.00000001.000004c2(5a504511) with subscription 01030000.65ccc678.00000002.000003c7(22db5d89).
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: publication 01030000.65ccc678.00000001.000004c2(5a504511) adding subscription 01030000.65ccc678.00000002.000003c7(22db5d89).
+2022-12-19 12:16:02.895@LM_DEBUG@(3178|3178) DataWriterRemoteImpl::add_association - local 01030000.65ccc678.00000001.000004c2(5a504511) remote 01030000.65ccc678.00000002.000003c7(22db5d89)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DataWriterImpl::add_association - bit 1 local 01030000.65ccc678.00000001.000004c2(5a504511) remote 01030000.65ccc678.00000002.000003c7(22db5d89)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000001.000004c2(5a504511) and remote 01030000.65ccc678.00000002.000003c7(22db5d89)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) PendingAssoc::initiate_connect - between 01030000.65ccc678.00000001.000004c2(5a504511) and remote 01030000.65ccc678.00000002.000003c7(22db5d89)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - attempt to connect_datalink between local 01030000.65ccc678.00000001.000004c2(5a504511) and remote 01030000.65ccc678.00000002.000003c7(22db5d89)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) NetworkResource::to_addr() - Resolving address for 127.0.0.1:40703 to be 127.0.0.1
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink PriorityKey prio=0, addr=127.0.0.1:40703, is_loopback=0, is_active=1
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink found datalink link[0x55e33d3142b0]
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - connection between local 01030000.65ccc678.00000001.000004c2(5a504511) and remote 01030000.65ccc678.00000002.000003c7(22db5d89) initiation successful
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) PendingAssoc::intiate_connect - resulting link from initiate_connect_i (local: 01030000.65ccc678.00000001.000004c2(5a504511) to remote: 01030000.65ccc678.00000002.000003c7(22db5d89)) was nil
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: successfully added subscription 3d31b800.
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: subscription 01030000.65ccc678.00000002.000003c7(22db5d89) adding publication 01030000.65ccc678.00000001.000004c2(5a504511).
+2022-12-19 12:16:02.896@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: successfully added publication 3d2cd040
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_subscription_reference: topic description DCPSPublication added subscription 01030000.65ccc678.00000002.000003c7(22db5d89) at 3d31b800
+2022-12-19 12:16:02.896@LM_DEBUG@(3186|3190) DataReaderRemoteImpl::add_association - local 01030000.65ccc678.00000002.000003c7(22db5d89) remote 01030000.65ccc678.00000001.000004c2(5a504511)
+2022-12-19 12:16:02.896@LM_DEBUG@(3186|3190) DataReaderImpl::add_association - bit 1 local 01030000.65ccc678.00000002.000003c7(22db5d89) remote 01030000.65ccc678.00000001.000004c2(5a504511)
+2022-12-19 12:16:02.896@LM_DEBUG@(3186|3190) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000002.000003c7(22db5d89) and remote 01030000.65ccc678.00000001.000004c2(5a504511)
+2022-12-19 12:16:02.896@LM_DEBUG@(3186|3190) NetworkResource::to_addr() - Resolving address for 127.0.0.1:36143 to be 127.0.0.1
+2022-12-19 12:16:02.896@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.896@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink found datalink link[0x7fd4b4005ad0]
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_subscription: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added subscription 01030000.65ccc678.00000003.000002c7(06a04578) at 0x3d31c6e0.
+2022-12-19 12:16:02.896@LM_DEBUG@(3186|3190) TransportClient::use_datalink_i TransportClient(0x5574f6349c58) using datalink[0x7fd4b4005ad0] from 01030000.65ccc678.00000001.000004c2(5a504511)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_subscription_reference: topic 01030000.65ccc678.00000003.000005c5(a7efb293) added subscription 01030000.65ccc678.00000003.000002c7(06a04578) at 3d31c6e0.
+2022-12-19 12:16:02.896@LM_DEBUG@(3186|3190) TransportClient::use_datalink_i TransportClient(0x5574f6349c58) about to add_link[0x7fd4b4005ad0] to remote: 01030000.65ccc678.00000001.000004c2(5a504511)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::try_associate: topic description DCPSTopic checking compatibility of publication 01030000.65ccc678.00000001.000002c2(0c0ae297) with subscription 01030000.65ccc678.00000003.000002c7(06a04578).
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::associate: topic description DCPSTopic associating publication 01030000.65ccc678.00000001.000002c2(0c0ae297) with subscription 01030000.65ccc678.00000003.000002c7(06a04578).
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: publication 01030000.65ccc678.00000001.000002c2(0c0ae297) adding subscription 01030000.65ccc678.00000003.000002c7(06a04578).
+2022-12-19 12:16:02.896@LM_INFO@(3186|3188) EndHistoricSamplesMissedSweeper::ScheduleCommand::execute() - sweeper 0x7fd4b4020fb0 is now scheduled
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DataWriterRemoteImpl::add_association - local 01030000.65ccc678.00000001.000002c2(0c0ae297) remote 01030000.65ccc678.00000003.000002c7(06a04578)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DataWriterImpl::add_association - bit 1 local 01030000.65ccc678.00000001.000002c2(0c0ae297) remote 01030000.65ccc678.00000003.000002c7(06a04578)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000001.000002c2(0c0ae297) and remote 01030000.65ccc678.00000003.000002c7(06a04578)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) PendingAssoc::initiate_connect - between 01030000.65ccc678.00000001.000002c2(0c0ae297) and remote 01030000.65ccc678.00000003.000002c7(06a04578)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - attempt to connect_datalink between local 01030000.65ccc678.00000001.000002c2(0c0ae297) and remote 01030000.65ccc678.00000003.000002c7(06a04578)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) NetworkResource::to_addr() - Resolving address for 127.0.0.1:43217 to be 127.0.0.1
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink PriorityKey prio=0, addr=127.0.0.1:43217, is_loopback=0, is_active=1
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d2c2c50) using datalink[0x55e33d3142b0] from 01030000.65ccc678.00000002.000003c7(22db5d89)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink found datalink link[0x55e33d317330]
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d2c2c50) about to add_link[0x55e33d3142b0] to remote: 01030000.65ccc678.00000002.000003c7(22db5d89)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - connection between local 01030000.65ccc678.00000001.000002c2(0c0ae297) and remote 01030000.65ccc678.00000003.000002c7(06a04578) initiation successful
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) PendingAssoc::intiate_connect - resulting link from initiate_connect_i (local: 01030000.65ccc678.00000001.000002c2(0c0ae297) to remote: 01030000.65ccc678.00000003.000002c7(06a04578)) was nil
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: successfully added subscription 3d31c6e0.
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: subscription 01030000.65ccc678.00000003.000002c7(06a04578) adding publication 01030000.65ccc678.00000001.000002c2(0c0ae297).
+2022-12-19 12:16:02.896@LM_INFO@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000004c2(5a504511) succeeded in associating with reader 01030000.65ccc678.00000002.000003c7(22db5d89)
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000004c2(5a504511) reader 01030000.65ccc678.00000002.000003c7(22db5d89) calling association_complete_i
+2022-12-19 12:16:02.896@LM_DEBUG@(3178|3192) DataWriterImpl::association_complete_i - bit 1 local 01030000.65ccc678.00000001.000004c2(5a504511) remote 01030000.65ccc678.00000002.000003c7(22db5d89)
+2022-12-19 12:16:02.897@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [10] busy_count = 0
+2022-12-19 12:16:02.897@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: successfully added publication 3d22ebc0
+2022-12-19 12:16:02.897@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_subscription_reference: topic description DCPSTopic added subscription 01030000.65ccc678.00000003.000002c7(06a04578) at 3d31c6e0
+2022-12-19 12:16:02.897@LM_WARNING@(3186|3186) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.897@LM_DEBUG@(3186|3186) DataReaderImpl::enable: got GUID 01030000.65ccc678.00000002.000003c7(22db5d89), subscribed to topic name "DCPSPublication" type "PUBLICATION_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3189) DataReaderRemoteImpl::add_association - local 01030000.65ccc678.00000003.000002c7(06a04578) remote 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3189) DataReaderImpl::add_association - bit 1 local 01030000.65ccc678.00000003.000002c7(06a04578) remote 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3189) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000003.000002c7(06a04578) and remote 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3189) NetworkResource::to_addr() - Resolving address for 127.0.0.1:36143 to be 127.0.0.1
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3189) TcpTransport::accept_datalink PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3189) TcpTransport::accept_datalink found datalink link[0x7f3570005ad0]
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3189) TransportClient::use_datalink_i TransportClient(0x557e63326608) using datalink[0x7f3570005ad0] from 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3189) TransportClient::use_datalink_i TransportClient(0x557e63326608) about to add_link[0x7f3570005ad0] to remote: 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.897@LM_INFO@(3185|3187) EndHistoricSamplesMissedSweeper::ScheduleCommand::execute() - sweeper 0x7f3570020510 is now scheduled
+2022-12-19 12:16:02.897@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d223c10) using datalink[0x55e33d317330] from 01030000.65ccc678.00000003.000002c7(06a04578)
+2022-12-19 12:16:02.897@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d223c10) about to add_link[0x55e33d317330] to remote: 01030000.65ccc678.00000003.000002c7(06a04578)
+2022-12-19 12:16:02.897@LM_INFO@(3186|3188) EndHistoricSamplesMissedSweeper::CancelCommand::execute() - sweeper 0x7fd4b4020fb0 is no longer scheduled
+2022-12-19 12:16:02.897@LM_INFO@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000002c2(0c0ae297) succeeded in associating with reader 01030000.65ccc678.00000003.000002c7(06a04578)
+2022-12-19 12:16:02.897@LM_DEBUG@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000002c2(0c0ae297) reader 01030000.65ccc678.00000003.000002c7(06a04578) calling association_complete_i
+2022-12-19 12:16:02.897@LM_DEBUG@(3178|3192) DataWriterImpl::association_complete_i - bit 1 local 01030000.65ccc678.00000001.000002c2(0c0ae297) remote 01030000.65ccc678.00000003.000002c7(06a04578)
+2022-12-19 12:16:02.897@LM_DEBUG@(3186|3186) DDS::SubscriptionBuiltinTopicDataDataReaderImpl::enable_specific-data Cached_Allocator_With_Overflow f634e7f0 with 20 chunks
+2022-12-19 12:16:02.897@LM_DEBUG@(3186|3186) DataReaderImpl::enable Cached_Allocator_With_Overflow f6396eb0 with 20 chunks
+2022-12-19 12:16:02.897@LM_DEBUG@(3186|3186) TcpTransport public address string <127.0.0.1:40703>
+2022-12-19 12:16:02.897@LM_DEBUG@(3186|3186) DataReaderImpl::setup_deserialization: Setup successfully with the following data representations: CDR/XCDR1, XCDR2, Unaligned CDR
+2022-12-19 12:16:02.897@LM_WARNING@(3185|3185) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3185) DataReaderImpl::enable: got GUID 01030000.65ccc678.00000003.000002c7(06a04578), subscribed to topic name "DCPSTopic" type "TOPIC_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.897@LM_INFO@(3185|3187) EndHistoricSamplesMissedSweeper::CancelCommand::execute() - sweeper 0x7f3570020510 is no longer scheduled
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3185) DDS::PublicationBuiltinTopicDataDataReaderImpl::enable_specific-data Cached_Allocator_With_Overflow 6332b1b0 with 20 chunks
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3185) DataReaderImpl::enable Cached_Allocator_With_Overflow 63373bc0 with 20 chunks
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3185) TcpTransport public address string <127.0.0.1:43217>
+2022-12-19 12:16:02.897@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.897@LM_DEBUG@(3185|3185) DataReaderImpl::setup_deserialization: Setup successfully with the following data representations: CDR/XCDR1, XCDR2, Unaligned CDR
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_subscription: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e) at 0x3d31d310.
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_subscription_reference: topic 01030000.65ccc678.00000002.000006c5(b1a2c8e0) added subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e) at 3d31d310.
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::try_associate: topic description DCPSSubscription checking compatibility of publication 01030000.65ccc678.00000001.000003c2(1511d3d6) with subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e).
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::associate: topic description DCPSSubscription associating publication 01030000.65ccc678.00000001.000003c2(1511d3d6) with subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e).
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: publication 01030000.65ccc678.00000001.000003c2(1511d3d6) adding subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e).
+2022-12-19 12:16:02.898@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DataWriterRemoteImpl::add_association - local 01030000.65ccc678.00000001.000003c2(1511d3d6) remote 01030000.65ccc678.00000002.000004c7(6d9acb4e)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DataWriterImpl::add_association - bit 1 local 01030000.65ccc678.00000001.000003c2(1511d3d6) remote 01030000.65ccc678.00000002.000004c7(6d9acb4e)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000001.000003c2(1511d3d6) and remote 01030000.65ccc678.00000002.000004c7(6d9acb4e)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) PendingAssoc::initiate_connect - between 01030000.65ccc678.00000001.000003c2(1511d3d6) and remote 01030000.65ccc678.00000002.000004c7(6d9acb4e)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - attempt to connect_datalink between local 01030000.65ccc678.00000001.000003c2(1511d3d6) and remote 01030000.65ccc678.00000002.000004c7(6d9acb4e)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) NetworkResource::to_addr() - Resolving address for 127.0.0.1:40703 to be 127.0.0.1
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink PriorityKey prio=0, addr=127.0.0.1:40703, is_loopback=0, is_active=1
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink found datalink link[0x55e33d3142b0]
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - connection between local 01030000.65ccc678.00000001.000003c2(1511d3d6) and remote 01030000.65ccc678.00000002.000004c7(6d9acb4e) initiation successful
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) PendingAssoc::intiate_connect - resulting link from initiate_connect_i (local: 01030000.65ccc678.00000001.000003c2(1511d3d6) to remote: 01030000.65ccc678.00000002.000004c7(6d9acb4e)) was nil
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: successfully added subscription 3d31d310.
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e) adding publication 01030000.65ccc678.00000001.000003c2(1511d3d6).
+2022-12-19 12:16:02.898@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: successfully added publication 3d27de90
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_subscription_reference: topic description DCPSSubscription added subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e) at 3d31d310
+2022-12-19 12:16:02.898@LM_DEBUG@(3186|3190) DataReaderRemoteImpl::add_association - local 01030000.65ccc678.00000002.000004c7(6d9acb4e) remote 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.898@LM_DEBUG@(3186|3190) DataReaderImpl::add_association - bit 1 local 01030000.65ccc678.00000002.000004c7(6d9acb4e) remote 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.898@LM_DEBUG@(3186|3190) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000002.000004c7(6d9acb4e) and remote 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.898@LM_DEBUG@(3186|3190) NetworkResource::to_addr() - Resolving address for 127.0.0.1:36143 to be 127.0.0.1
+2022-12-19 12:16:02.898@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_subscription: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added subscription 01030000.65ccc678.00000003.000003c7(1fbb7439) at 0x3d31f1e0.
+2022-12-19 12:16:02.898@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink found datalink link[0x7fd4b4005ad0]
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_subscription_reference: topic 01030000.65ccc678.00000003.000007c5(95d9d011) added subscription 01030000.65ccc678.00000003.000003c7(1fbb7439) at 3d31f1e0.
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::try_associate: topic description DCPSPublication checking compatibility of publication 01030000.65ccc678.00000001.000004c2(5a504511) with subscription 01030000.65ccc678.00000003.000003c7(1fbb7439).
+2022-12-19 12:16:02.898@LM_DEBUG@(3186|3190) TransportClient::use_datalink_i TransportClient(0x5574f6394468) using datalink[0x7fd4b4005ad0] from 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::associate: topic description DCPSPublication associating publication 01030000.65ccc678.00000001.000004c2(5a504511) with subscription 01030000.65ccc678.00000003.000003c7(1fbb7439).
+2022-12-19 12:16:02.898@LM_DEBUG@(3186|3190) TransportClient::use_datalink_i TransportClient(0x5574f6394468) about to add_link[0x7fd4b4005ad0] to remote: 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: publication 01030000.65ccc678.00000001.000004c2(5a504511) adding subscription 01030000.65ccc678.00000003.000003c7(1fbb7439).
+2022-12-19 12:16:02.898@LM_INFO@(3186|3188) EndHistoricSamplesMissedSweeper::ScheduleCommand::execute() - sweeper 0x7fd4b4021a70 is now scheduled
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d273930) using datalink[0x55e33d3142b0] from 01030000.65ccc678.00000002.000004c7(6d9acb4e)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DataWriterRemoteImpl::add_association - local 01030000.65ccc678.00000001.000004c2(5a504511) remote 01030000.65ccc678.00000003.000003c7(1fbb7439)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d273930) about to add_link[0x55e33d3142b0] to remote: 01030000.65ccc678.00000002.000004c7(6d9acb4e)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) DataWriterImpl::add_association - bit 1 local 01030000.65ccc678.00000001.000004c2(5a504511) remote 01030000.65ccc678.00000003.000003c7(1fbb7439)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000001.000004c2(5a504511) and remote 01030000.65ccc678.00000003.000003c7(1fbb7439)
+2022-12-19 12:16:02.898@LM_DEBUG@(3178|3178) PendingAssoc::initiate_connect - between 01030000.65ccc678.00000001.000004c2(5a504511) and remote 01030000.65ccc678.00000003.000003c7(1fbb7439)
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - attempt to connect_datalink between local 01030000.65ccc678.00000001.000004c2(5a504511) and remote 01030000.65ccc678.00000003.000003c7(1fbb7439)
+2022-12-19 12:16:02.899@LM_INFO@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000003c2(1511d3d6) succeeded in associating with reader 01030000.65ccc678.00000002.000004c7(6d9acb4e)
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) NetworkResource::to_addr() - Resolving address for 127.0.0.1:43217 to be 127.0.0.1
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000003c2(1511d3d6) reader 01030000.65ccc678.00000002.000004c7(6d9acb4e) calling association_complete_i
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink PriorityKey prio=0, addr=127.0.0.1:43217, is_loopback=0, is_active=1
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3192) DataWriterImpl::association_complete_i - bit 1 local 01030000.65ccc678.00000001.000003c2(1511d3d6) remote 01030000.65ccc678.00000002.000004c7(6d9acb4e)
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink found datalink link[0x55e33d317330]
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - connection between local 01030000.65ccc678.00000001.000004c2(5a504511) and remote 01030000.65ccc678.00000003.000003c7(1fbb7439) initiation successful
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) PendingAssoc::intiate_connect - resulting link from initiate_connect_i (local: 01030000.65ccc678.00000001.000004c2(5a504511) to remote: 01030000.65ccc678.00000003.000003c7(1fbb7439)) was nil
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: successfully added subscription 3d31f1e0.
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: subscription 01030000.65ccc678.00000003.000003c7(1fbb7439) adding publication 01030000.65ccc678.00000001.000004c2(5a504511).
+2022-12-19 12:16:02.899@LM_WARNING@(3186|3186) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.899@LM_DEBUG@(3186|3186) DataReaderImpl::enable: got GUID 01030000.65ccc678.00000002.000004c7(6d9acb4e), subscribed to topic name "DCPSSubscription" type "SUBSCRIPTION_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.899@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [10] busy_count = 0
+2022-12-19 12:16:02.899@LM_INFO@(3186|3188) EndHistoricSamplesMissedSweeper::CancelCommand::execute() - sweeper 0x7fd4b4021a70 is no longer scheduled
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: successfully added publication 3d2cd040
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_subscription_reference: topic description DCPSPublication added subscription 01030000.65ccc678.00000003.000003c7(1fbb7439) at 3d31f1e0
+2022-12-19 12:16:02.899@LM_DEBUG@(3185|3189) DataReaderRemoteImpl::add_association - local 01030000.65ccc678.00000003.000003c7(1fbb7439) remote 01030000.65ccc678.00000001.000004c2(5a504511)
+2022-12-19 12:16:02.899@LM_DEBUG@(3185|3189) DataReaderImpl::add_association - bit 1 local 01030000.65ccc678.00000003.000003c7(1fbb7439) remote 01030000.65ccc678.00000001.000004c2(5a504511)
+2022-12-19 12:16:02.899@LM_DEBUG@(3185|3189) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000003.000003c7(1fbb7439) and remote 01030000.65ccc678.00000001.000004c2(5a504511)
+2022-12-19 12:16:02.899@LM_DEBUG@(3185|3189) NetworkResource::to_addr() - Resolving address for 127.0.0.1:36143 to be 127.0.0.1
+2022-12-19 12:16:02.899@LM_DEBUG@(3185|3189) TcpTransport::accept_datalink PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.899@LM_DEBUG@(3185|3189) TcpTransport::accept_datalink found datalink link[0x7f3570005ad0]
+2022-12-19 12:16:02.899@LM_DEBUG@(3185|3189) TransportClient::use_datalink_i TransportClient(0x557e63370c58) using datalink[0x7f3570005ad0] from 01030000.65ccc678.00000001.000004c2(5a504511)
+2022-12-19 12:16:02.899@LM_DEBUG@(3185|3189) TransportClient::use_datalink_i TransportClient(0x557e63370c58) about to add_link[0x7f3570005ad0] to remote: 01030000.65ccc678.00000001.000004c2(5a504511)
+2022-12-19 12:16:02.899@LM_INFO@(3185|3187) EndHistoricSamplesMissedSweeper::ScheduleCommand::execute() - sweeper 0x7f3570021040 is now scheduled
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d2c2c50) using datalink[0x55e33d317330] from 01030000.65ccc678.00000003.000003c7(1fbb7439)
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d2c2c50) about to add_link[0x55e33d317330] to remote: 01030000.65ccc678.00000003.000003c7(1fbb7439)
+2022-12-19 12:16:02.899@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.899@LM_INFO@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000004c2(5a504511) succeeded in associating with reader 01030000.65ccc678.00000003.000003c7(1fbb7439)
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000004c2(5a504511) reader 01030000.65ccc678.00000003.000003c7(1fbb7439) calling association_complete_i
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3192) DataWriterImpl::association_complete_i - bit 1 local 01030000.65ccc678.00000001.000004c2(5a504511) remote 01030000.65ccc678.00000003.000003c7(1fbb7439)
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_description: added Topic Description 0x3d31dbe0 in domain 42.
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description Movie Discussion List added topic 01030000.65ccc678.00000002.00000845(c299664e) at 3d31dc80.
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added topic 01030000.65ccc678.00000002.00000845(c299664e) at 0x3d31dc80.
+2022-12-19 12:16:02.899@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000002.00000845(c299664e) at 0x3d31dc80.
+2022-12-19 12:16:02.899@LM_WARNING@(3185|3185) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.899@LM_DEBUG@(3185|3185) DataReaderImpl::enable: got GUID 01030000.65ccc678.00000003.000003c7(1fbb7439), subscribed to topic name "DCPSPublication" type "PUBLICATION_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.900@LM_INFO@(3185|3187) EndHistoricSamplesMissedSweeper::CancelCommand::execute() - sweeper 0x7f3570021040 is no longer scheduled
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d227c88
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) DCPS_IR_Domain::publish_topic_bit: 01030000.65ccc678.00000002.00000845(c299664e), handle 4.
+2022-12-19 12:16:02.900@LM_DEBUG@(3185|3185) DDS::SubscriptionBuiltinTopicDataDataReaderImpl::enable_specific-data Cached_Allocator_With_Overflow 633757f0 with 20 chunks
+2022-12-19 12:16:02.900@LM_DEBUG@(3185|3185) DataReaderImpl::enable Cached_Allocator_With_Overflow 633bdeb0 with 20 chunks
+2022-12-19 12:16:02.900@LM_DEBUG@(3185|3185) TcpTransport public address string <127.0.0.1:43217>
+2022-12-19 12:16:02.900@LM_DEBUG@(3185|3185) DataReaderImpl::setup_deserialization: Setup successfully with the following data representations: CDR/XCDR1, XCDR2, Unaligned CDR
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d227c88
+2022-12-19 12:16:02.900@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.900@LM_DEBUG@(3186|3186) Messenger::MessageDataReaderImpl::enable_specific-data Cached_Allocator_With_Overflow f63e0700 with 20 chunks
+2022-12-19 12:16:02.900@LM_DEBUG@(3186|3186) DataReaderImpl::enable Cached_Allocator_With_Overflow f63e0b60 with 20 chunks
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_subscription: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added subscription 01030000.65ccc678.00000003.000004c7(50fae2fe) at 0x3d320590.
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_subscription_reference: topic 01030000.65ccc678.00000003.000006c5(8cc2e150) added subscription 01030000.65ccc678.00000003.000004c7(50fae2fe) at 3d320590.
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::try_associate: topic description DCPSSubscription checking compatibility of publication 01030000.65ccc678.00000001.000003c2(1511d3d6) with subscription 01030000.65ccc678.00000003.000004c7(50fae2fe).
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::associate: topic description DCPSSubscription associating publication 01030000.65ccc678.00000001.000003c2(1511d3d6) with subscription 01030000.65ccc678.00000003.000004c7(50fae2fe).
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: publication 01030000.65ccc678.00000001.000003c2(1511d3d6) adding subscription 01030000.65ccc678.00000003.000004c7(50fae2fe).
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) DataWriterRemoteImpl::add_association - local 01030000.65ccc678.00000001.000003c2(1511d3d6) remote 01030000.65ccc678.00000003.000004c7(50fae2fe)
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) DataWriterImpl::add_association - bit 1 local 01030000.65ccc678.00000001.000003c2(1511d3d6) remote 01030000.65ccc678.00000003.000004c7(50fae2fe)
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000001.000003c2(1511d3d6) and remote 01030000.65ccc678.00000003.000004c7(50fae2fe)
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) PendingAssoc::initiate_connect - between 01030000.65ccc678.00000001.000003c2(1511d3d6) and remote 01030000.65ccc678.00000003.000004c7(50fae2fe)
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - attempt to connect_datalink between local 01030000.65ccc678.00000001.000003c2(1511d3d6) and remote 01030000.65ccc678.00000003.000004c7(50fae2fe)
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) NetworkResource::to_addr() - Resolving address for 127.0.0.1:43217 to be 127.0.0.1
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink PriorityKey prio=0, addr=127.0.0.1:43217, is_loopback=0, is_active=1
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) TcpTransport::connect_datalink found datalink link[0x55e33d317330]
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) TransportClient::initiate_connect_i - connection between local 01030000.65ccc678.00000001.000003c2(1511d3d6) and remote 01030000.65ccc678.00000003.000004c7(50fae2fe) initiation successful
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) PendingAssoc::intiate_connect - resulting link from initiate_connect_i (local: 01030000.65ccc678.00000001.000003c2(1511d3d6) to remote: 01030000.65ccc678.00000003.000004c7(50fae2fe)) was nil
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: successfully added subscription 3d320590.
+2022-12-19 12:16:02.900@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: subscription 01030000.65ccc678.00000003.000004c7(50fae2fe) adding publication 01030000.65ccc678.00000001.000003c2(1511d3d6).
+2022-12-19 12:16:02.901@LM_DEBUG@(3186|3186) TcpTransport::configure_i overriding with DCPSDefaultAddress
+2022-12-19 12:16:02.901@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [10] busy_count = 0
+2022-12-19 12:16:02.901@LM_DEBUG@(3186|3186) TcpTransport::configure_i opening acceptor for 127.0.0.1:0 on 127.0.0.1:0
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: successfully added publication 3d27de90
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_subscription_reference: topic description DCPSSubscription added subscription 01030000.65ccc678.00000003.000004c7(50fae2fe) at 3d320590
+2022-12-19 12:16:02.901@LM_DEBUG@(3186|3186) TcpTransport::configure_i listening on 127.0.0.1:43293
+2022-12-19 12:16:02.901@LM_DEBUG@(3185|3189) DataReaderRemoteImpl::add_association - local 01030000.65ccc678.00000003.000004c7(50fae2fe) remote 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.901@LM_DEBUG@(3185|3189) DataReaderImpl::add_association - bit 1 local 01030000.65ccc678.00000003.000004c7(50fae2fe) remote 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.901@LM_DEBUG@(3186|3186) TransportImpl::open()
+   transport_type:               tcp
+   name:                         _OPENDDS_0500_TCP
+   queue_messages_per_pool:      10
+   queue_initial_pools:          5
+   max_packet_size:              2147481599
+   max_samples_per_packet:       10
+   optimum_packet_size:          4096
+   thread_per_connection:        false
+   datalink_release_delay:       10000
+   datalink_control_chunks:      32
+   fragment_reassembly_timeout:  5:00.000
+   receive_preallocated_message_blocks:0
+   receive_preallocated_data_blocks:0
+   local_address:                127.0.0.1:43293
+   pub_address:                  
+   enable_nagle_algorithm:       false
+   conn_retry_initial_delay:     500
+   conn_retry_backoff_multiplier:2
+   conn_retry_attempts:          3
+   passive_reconnect_duration:   2000
+   max_output_pause_period:      -1
+   active_conn_timeout_period:   5000
+2022-12-19 12:16:02.901@LM_DEBUG@(3185|3189) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000003.000004c7(50fae2fe) and remote 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.901@LM_DEBUG@(3186|3186) TcpTransport public address string <127.0.0.1:43293>
+2022-12-19 12:16:02.901@LM_DEBUG@(3185|3189) NetworkResource::to_addr() - Resolving address for 127.0.0.1:36143 to be 127.0.0.1
+2022-12-19 12:16:02.901@LM_DEBUG@(3185|3189) TcpTransport::accept_datalink PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.901@LM_DEBUG@(3186|3186) DataReaderImpl::setup_deserialization: Setup successfully with the following data representations: CDR/XCDR1, XCDR2, Unaligned CDR
+2022-12-19 12:16:02.901@LM_DEBUG@(3185|3189) TcpTransport::accept_datalink found datalink link[0x7f3570005ad0]
+2022-12-19 12:16:02.901@LM_DEBUG@(3185|3189) TransportClient::use_datalink_i TransportClient(0x557e633bb468) using datalink[0x7f3570005ad0] from 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.901@LM_DEBUG@(3185|3189) TransportClient::use_datalink_i TransportClient(0x557e633bb468) about to add_link[0x7f3570005ad0] to remote: 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.901@LM_INFO@(3185|3187) EndHistoricSamplesMissedSweeper::ScheduleCommand::execute() - sweeper 0x7f3570021b00 is now scheduled
+2022-12-19 12:16:02.901@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d273930) using datalink[0x55e33d317330] from 01030000.65ccc678.00000003.000004c7(50fae2fe)
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3192) TransportClient::use_datalink_i TransportClient(0x55e33d273930) about to add_link[0x55e33d317330] to remote: 01030000.65ccc678.00000003.000004c7(50fae2fe)
+2022-12-19 12:16:02.901@LM_INFO@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000003c2(1511d3d6) succeeded in associating with reader 01030000.65ccc678.00000003.000004c7(50fae2fe)
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3192) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000001.000003c2(1511d3d6) reader 01030000.65ccc678.00000003.000004c7(50fae2fe) calling association_complete_i
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3192) DataWriterImpl::association_complete_i - bit 1 local 01030000.65ccc678.00000001.000003c2(1511d3d6) remote 01030000.65ccc678.00000003.000004c7(50fae2fe)
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_subscription: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) successfully added subscription 01030000.65ccc678.00000002.00000507(efe538bf) at 0x3d321310.
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_subscription_reference: topic 01030000.65ccc678.00000002.00000845(c299664e) added subscription 01030000.65ccc678.00000002.00000507(efe538bf) at 3d321310.
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d277088
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3178) DCPS_IR_Domain::publish_subscription_bit: 01030000.65ccc678.00000002.00000507(efe538bf), handle 5.
+2022-12-19 12:16:02.901@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d277088
+2022-12-19 12:16:02.902@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_subscription_reference: topic description Movie Discussion List added subscription 01030000.65ccc678.00000002.00000507(efe538bf) at 3d321310
+2022-12-19 12:16:02.902@LM_WARNING@(3186|3186) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.902@LM_WARNING@(3185|3185) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.902@LM_DEBUG@(3186|3186) DataReaderImpl::enable: got GUID 01030000.65ccc678.00000002.00000507(efe538bf), subscribed to topic name "Movie Discussion List" type "Messenger::Message"
+2022-12-19 12:16:02.902@LM_DEBUG@(3185|3185) DataReaderImpl::enable: got GUID 01030000.65ccc678.00000003.000004c7(50fae2fe), subscribed to topic name "DCPSSubscription" type "SUBSCRIPTION_BUILT_IN_TOPIC_TYPE"
+2022-12-19 12:16:02.902@LM_INFO@(3185|3187) EndHistoricSamplesMissedSweeper::CancelCommand::execute() - sweeper 0x7f3570021b00 is no longer scheduled
+2022-12-19 12:16:02.902@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.902@LM_DEBUG@(3178|3178) DCPS_IR_Domain::find_topic_description: located topic description Movie Discussion List/Messenger::Message in domain 42.
+2022-12-19 12:16:02.902@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::add_topic: topic description Movie Discussion List added topic 01030000.65ccc678.00000003.00000845(fff94ffe) at 3d321ca0.
+2022-12-19 12:16:02.902@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added topic 01030000.65ccc678.00000003.00000845(fff94ffe) at 0x3d321ca0.
+2022-12-19 12:16:02.902@LM_DEBUG@(3178|3178) DCPS_IR_Domain::add_topic_i: Domain 42 successfully added topic 01030000.65ccc678.00000003.00000845(fff94ffe) at 0x3d321ca0.
+2022-12-19 12:16:02.902@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d227b30
+2022-12-19 12:16:02.902@LM_DEBUG@(3178|3178) DCPS_IR_Domain::publish_topic_bit: 01030000.65ccc678.00000003.00000845(fff94ffe), handle 6.
+2022-12-19 12:16:02.902@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d227b30
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) WriteDataContainer sample_list_element_allocator 632e36d8 with 20 chunks
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) DataWriterImpl::enable-mb Cached_Allocator_With_Overflow 633bfa50 with 20 chunks
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) DataWriterImpl::enable-db Cached_Allocator_With_Overflow 63404650 with 20 chunks
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) DataWriterImpl::enable-header Cached_Allocator_With_Overflow 6340d780 with 20 chunks
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) TcpTransport::configure_i overriding with DCPSDefaultAddress
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) TcpTransport::configure_i opening acceptor for 127.0.0.1:0 on 127.0.0.1:0
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) TcpTransport::configure_i listening on 127.0.0.1:40069
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) TransportImpl::open()
+   transport_type:               tcp
+   name:                         _OPENDDS_0500_TCP
+   queue_messages_per_pool:      10
+   queue_initial_pools:          5
+   max_packet_size:              2147481599
+   max_samples_per_packet:       10
+   optimum_packet_size:          4096
+   thread_per_connection:        false
+   datalink_release_delay:       10000
+   datalink_control_chunks:      32
+   fragment_reassembly_timeout:  5:00.000
+   receive_preallocated_message_blocks:0
+   receive_preallocated_data_blocks:0
+   local_address:                127.0.0.1:40069
+   pub_address:                  
+   enable_nagle_algorithm:       false
+   conn_retry_initial_delay:     500
+   conn_retry_backoff_multiplier:2
+   conn_retry_attempts:          3
+   passive_reconnect_duration:   2000
+   max_output_pause_period:      -1
+   active_conn_timeout_period:   5000
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) TcpTransport public address string <127.0.0.1:40069>
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) WriterImpl::setup_serialization: Setup successfully with Unaligned CDR data representation.
+2022-12-19 12:16:02.903@LM_DEBUG@(3185|3185) DataWriterImpl::setup_serialization: sample size is unbounded, not using data allocator, always allocating from heap
+2022-12-19 12:16:02.903@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) DCPS_IR_Participant::add_publication: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) successfully added publication 01030000.65ccc678.00000003.00000102(c6832084) at 0x3d3237e0.
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d2c6728
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) DCPS_IR_Domain::publish_publication_bit: 01030000.65ccc678.00000003.00000102(c6832084), handle 7.
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d2c6728
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::try_associate: topic description Movie Discussion List checking compatibility of publication 01030000.65ccc678.00000003.00000102(c6832084) with subscription 01030000.65ccc678.00000002.00000507(efe538bf).
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::associate: topic description Movie Discussion List associating publication 01030000.65ccc678.00000003.00000102(c6832084) with subscription 01030000.65ccc678.00000002.00000507(efe538bf).
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: publication 01030000.65ccc678.00000003.00000102(c6832084) adding subscription 01030000.65ccc678.00000002.00000507(efe538bf).
+2022-12-19 12:16:02.904@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [10] busy_count = 0
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) DCPS_IR_Publication::add_associated_subscription: successfully added subscription 3d321310.
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: subscription 01030000.65ccc678.00000002.00000507(efe538bf) adding publication 01030000.65ccc678.00000003.00000102(c6832084).
+2022-12-19 12:16:02.904@LM_DEBUG@(3185|3189) DataWriterRemoteImpl::add_association - local 01030000.65ccc678.00000003.00000102(c6832084) remote 01030000.65ccc678.00000002.00000507(efe538bf)
+2022-12-19 12:16:02.904@LM_DEBUG@(3185|3189) DataWriterImpl::add_association - bit 0 local 01030000.65ccc678.00000003.00000102(c6832084) remote 01030000.65ccc678.00000002.00000507(efe538bf)
+2022-12-19 12:16:02.904@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.904@LM_DEBUG@(3185|3189) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000003.00000102(c6832084) and remote 01030000.65ccc678.00000002.00000507(efe538bf)
+2022-12-19 12:16:02.904@LM_DEBUG@(3185|3189) PendingAssoc::initiate_connect - between 01030000.65ccc678.00000003.00000102(c6832084) and remote 01030000.65ccc678.00000002.00000507(efe538bf)
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::add_associated_publication: successfully added publication 3d3237e0
+2022-12-19 12:16:02.904@LM_DEBUG@(3185|3189) TransportClient::initiate_connect_i - attempt to connect_datalink between local 01030000.65ccc678.00000003.00000102(c6832084) and remote 01030000.65ccc678.00000002.00000507(efe538bf)
+2022-12-19 12:16:02.904@LM_DEBUG@(3178|3178) DCPS_IR_Topic::add_publication_reference: topic 01030000.65ccc678.00000003.00000845(fff94ffe) added publication 01030000.65ccc678.00000003.00000102(c6832084) at 3d3237e0
+2022-12-19 12:16:02.905@LM_DEBUG@(3185|3189) NetworkResource::to_addr() - Resolving address for 127.0.0.1:43293 to be 127.0.0.1
+2022-12-19 12:16:02.905@LM_DEBUG@(3185|3189) TcpTransport::connect_datalink PriorityKey prio=0, addr=127.0.0.1:43293, is_loopback=0, is_active=1
+2022-12-19 12:16:02.905@LM_DEBUG@(3186|3190) DataReaderRemoteImpl::add_association - local 01030000.65ccc678.00000002.00000507(efe538bf) remote 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.905@LM_DEBUG@(3186|3190) DataReaderImpl::add_association - bit 0 local 01030000.65ccc678.00000002.00000507(efe538bf) remote 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.905@LM_DEBUG@(3185|3189) TcpTransport::connect_datalink create new link[0x7f3570022930]
+2022-12-19 12:16:02.905@LM_DEBUG@(3186|3190) TransportClient::associate added PendingAssoc between 01030000.65ccc678.00000002.00000507(efe538bf) and remote 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.905@LM_WARNING@(3185|3185) TypeLookupService::type_identifier_to_dynamic - Encountered TK_NONE: returning nil Dynamic Type
+2022-12-19 12:16:02.905@LM_DEBUG@(3186|3199) DBG:   TcpConnection::passive_open.
+2022-12-19 12:16:02.905@LM_DEBUG@(3185|3185) DataWriterImpl::enable: got GUID 01030000.65ccc678.00000003.00000102(c6832084), publishing to topic name "Movie Discussion List" type "Messenger::Message"
+2022-12-19 12:16:02.905@LM_DEBUG@(3186|3199) DBG:   TcpConnection::open passive handle=19.
+2022-12-19 12:16:02.905@LM_DEBUG@(3186|3190) NetworkResource::to_addr() - Resolving address for 127.0.0.1:40069 to be 127.0.0.1
+2022-12-19 12:16:02.905@LM_DEBUG@Block until subscriber is available
+2022-12-19 12:16:02.905@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink PriorityKey prio=0, addr=127.0.0.1:40069, is_loopback=0, is_active=0
+2022-12-19 12:16:02.905@LM_DEBUG@(3186|3190) TcpTransport::accept_datalink create new link[0x7fd4b4022b10]
+2022-12-19 12:16:02.905@LM_DEBUG@(3185|3189) TcpTransport::connect_datalink pending.
+2022-12-19 12:16:02.905@LM_DEBUG@(3185|3189) TransportClient::initiate_connect_i - connection between local 01030000.65ccc678.00000003.00000102(c6832084) and remote 01030000.65ccc678.00000002.00000507(efe538bf) initiation successful
+2022-12-19 12:16:02.905@LM_DEBUG@(3185|3189) PendingAssoc::intiate_connect - resulting link from initiate_connect_i (local: 01030000.65ccc678.00000003.00000102(c6832084) to remote: 01030000.65ccc678.00000002.00000507(efe538bf)) was nil
+2022-12-19 12:16:02.905@LM_DEBUG@(3185|3201) DBG:   TcpConnection::active_open.
+2022-12-19 12:16:02.905@LM_DEBUG@(3185|3201) TcpConnection::on_active_connection_established: Sending public address <127.0.0.1:40069> to remote side
+2022-12-19 12:16:02.905@LM_DEBUG@(3186|3199) NetworkResource::to_addr() - Resolving address for 127.0.0.1:40069 to be 127.0.0.1
+2022-12-19 12:16:02.905@LM_DEBUG@(3186|3199) TcpTransport::passive_connection() - established with 127.0.0.1:40069.
+2022-12-19 12:16:02.906@LM_DEBUG@(3185|3201) TransportReceiveStrategy-mb Cached_Allocator_With_Overflow 0x7f35640050e8 with 1000 chunks
+2022-12-19 12:16:02.906@LM_DEBUG@(3185|3201) TransportReceiveStrategy-db Cached_Allocator_With_Overflow 0x7f3564005170 with 100 chunks
+2022-12-19 12:16:02.906@LM_DEBUG@(3185|3201) TransportReceiveStrategy-data Cached_Allocator_With_Overflow 0x7f35640051f8 with 32 chunks
+2022-12-19 12:16:02.906@LM_DEBUG@(3186|3199) TransportReceiveStrategy-mb Cached_Allocator_With_Overflow 0x7fd4a8005478 with 1000 chunks
+2022-12-19 12:16:02.906@LM_DEBUG@(3186|3199) TransportReceiveStrategy-db Cached_Allocator_With_Overflow 0x7fd4a8005500 with 100 chunks
+2022-12-19 12:16:02.906@LM_DEBUG@(3186|3199) TransportReceiveStrategy-data Cached_Allocator_With_Overflow 0x7fd4a8005588 with 32 chunks
+2022-12-19 12:16:02.906@LM_DEBUG@(3186|3199) TransportClient::use_datalink_i TransportClient(0x5574f63de838) using datalink[0x7fd4b4022b10] from 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.906@LM_DEBUG@(3186|3199) TransportClient::use_datalink_i TransportClient(0x5574f63de838) about to add_link[0x7fd4b4022b10] to remote: 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.906@LM_DEBUG@(3185|3201) TransportClient::use_datalink_i TransportClient(0x557e63405990) using datalink[0x7f3570022930] from 01030000.65ccc678.00000002.00000507(efe538bf)
+2022-12-19 12:16:02.906@LM_DEBUG@(3185|3201) TransportClient::use_datalink_i TransportClient(0x557e63405990) about to add_link[0x7f3570022930] to remote: 01030000.65ccc678.00000002.00000507(efe538bf)
+2022-12-19 12:16:02.906@LM_INFO@(3185|3201) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000003.00000102(c6832084) succeeded in associating with reader 01030000.65ccc678.00000002.00000507(efe538bf)
+2022-12-19 12:16:02.906@LM_DEBUG@(3185|3201) DataWriterImpl::transport_assoc_done: writer 01030000.65ccc678.00000003.00000102(c6832084) reader 01030000.65ccc678.00000002.00000507(efe538bf) calling association_complete_i
+2022-12-19 12:16:02.906@LM_DEBUG@(3185|3201) DataWriterImpl::association_complete_i - bit 0 local 01030000.65ccc678.00000003.00000102(c6832084) remote 01030000.65ccc678.00000002.00000507(efe538bf)
+2022-12-19 12:16:02.906@LM_DEBUG@Subscriber is available
+2022-12-19 12:16:02.906@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.906@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 99
+         from       = Comic Book Guy
+         count      = 0
+         text       = Worst. Movie. Ever.
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 100
+         from       = Comic Book Guy
+         count      = 1
+         text       = Worst. Movie. Ever.
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 101
+         from       = Comic Book Guy
+         count      = 2
+         text       = Worst. Movie. Ever.
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 102
+         from       = Comic Book Guy
+         count      = 3
+         text       = Worst. Movie. Ever.
+2022-12-19 12:16:02.907@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.908@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 103
+         from       = Comic Book Guy
+         count      = 4
+2022-12-19 12:16:02.908@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+         text       = Worst. Movie. Ever.
+2022-12-19 12:16:02.908@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.908@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 104
+         from       = Comic Book Guy
+2022-12-19 12:16:02.908@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+         count      = 5
+         text       = Worst. Movie. Ever.
+2022-12-19 12:16:02.908@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.908@LM_DEBUG@(3185|3185) TcpDataLink::handle_send_request_ack(0x557e632e31c0) sequence number 21, publication_id=01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.908@LM_DEBUG@(3185|3185) DataWriterImpl::create_ack_token() - for sequence 21
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+2022-12-19 12:16:02.908@LM_DEBUG@(3185|3185) DataWriterImpl::wait_for_acknowledgments waiting for acknowledgment of sequence 21 at  12:16:02.908554
+         subject_id = 105
+         from       = Comic Book Guy
+         count      = 6
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 106
+         from       = Comic Book Guy
+         count      = 7
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 107
+         from       = Comic Book Guy
+         count      = 8
+         text       = Worst. Movie. Ever.
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = ALIVE_INSTANCE_STATE
+Message: subject    = Review
+         subject_id = 108
+         from       = Comic Book Guy
+         count      = 9
+         text       = Worst. Movie. Ever.
+2022-12-19 12:16:02.909@LM_DEBUG@(3185|3201) TcpDataLink::ack_received() received sequence number 21, publiction_id=01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.909@LM_DEBUG@(3185|3201) TcpDataLink::ack_received() found matching element 0x557e632e31c0
+2022-12-19 12:16:02.909@LM_DEBUG@(3185|3201) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.909@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.909@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.909@LM_DEBUG@(3186|3199) InstanceState::unregister_was_received on 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.909@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+2022-12-19 12:16:02.909@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.909@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.910@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.910@LM_DEBUG@(3186|3199) InstanceState::unregister_was_received on 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.910@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+2022-12-19 12:16:02.910@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.910@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+2022-12-19 12:16:02.910@LM_DEBUG@(3186|3199) InstanceState::unregister_was_received on 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.910@LM_DEBUG@(3185|3185) WriteDataContainer::data_delivered 0x557e634090e8
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+2022-12-19 12:16:02.910@LM_DEBUG@(3186|3199) InstanceState::unregister_was_received on 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.910@LM_DEBUG@(3185|3187) DataWriterImpl::remove_associations: bit 0 local 01030000.65ccc678.00000003.00000102(c6832084) remote 01030000.65ccc678.00000002.00000507(efe538bf) num remotes 1
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+2022-12-19 12:16:02.910@LM_DEBUG@(3186|3199) InstanceState::unregister_was_received on 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.910@LM_DEBUG@(3185|3187) TcpTransport::release_datalink link[0x7f3570022930] PriorityKey prio=0, addr=127.0.0.1:43293, is_loopback=0, is_active=1
+2022-12-19 12:16:02.910@LM_DEBUG@(3185|3201) DataLink::handle_exception() - (delay) scheduling timer for future release
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+2022-12-19 12:16:02.910@LM_DEBUG@(3186|3199) InstanceState::unregister_was_received on 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.910@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+2022-12-19 12:16:02.911@LM_DEBUG@(3186|3199) InstanceState::unregister_was_received on 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.911@LM_DEBUG@(3178|3178) DCPS_IR_Topic::remove_publication_reference: topic 01030000.65ccc678.00000003.00000845(fff94ffe) removed publication 01030000.65ccc678.00000003.00000102(c6832084).
+2022-12-19 12:16:02.911@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::remove_associated_publication: calling sub 01030000.65ccc678.00000002.00000507(efe538bf) with pub 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.911@LM_DEBUG@TAO (3178|3178) - TAO_Connector::connect: found a transport [9] busy_count = 0
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+2022-12-19 12:16:02.911@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::remove_associated_publication: subscription 01030000.65ccc678.00000002.00000507(efe538bf) removed publication 01030000.65ccc678.00000003.00000102(c6832084) at 3d3237e0.
+2022-12-19 12:16:02.911@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: publication 01030000.65ccc678.00000003.00000102(c6832084) removed subscription 01030000.65ccc678.00000002.00000507(efe538bf) at 3d321310.
+2022-12-19 12:16:02.911@LM_DEBUG@(3186|3199) InstanceState::unregister_was_received on 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.911@LM_DEBUG@(3186|3190) DataReaderImpl::remove_associations: bit 0 local 01030000.65ccc678.00000002.00000507(efe538bf) remote 01030000.65ccc678.00000003.00000102(c6832084) num remotes 1
+2022-12-19 12:16:02.911@LM_DEBUG@(3186|3190) DataReaderImpl::remove_associations_i: bit 0 local 01030000.65ccc678.00000002.00000507(efe538bf) remote 01030000.65ccc678.00000003.00000102(c6832084) num remotes 1
+SampleInfo.sample_rank = 0
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+2022-12-19 12:16:02.911@LM_DEBUG@(3186|3190) InstanceState::unregister_was_received on 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.911@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d2c6728
+2022-12-19 12:16:02.911@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_publication: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed publication 01030000.65ccc678.00000003.00000102(c6832084).
+SampleInfo.sample_rank = 0
+2022-12-19 12:16:02.911@LM_DEBUG@(3186|3199) InstanceState::unregister_was_received on 01030000.65ccc678.00000003.00000102(c6832084)
+2022-12-19 12:16:02.911@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+SampleInfo.instance_state = NOT_ALIVE_NO_WRITERS_INSTANCE_STATE
+SampleInfo.sample_rank = 0
+2022-12-19 12:16:02.911@LM_DEBUG@(3178|3178) DCPS_IR_Topic::remove_subscription_reference: topic 01030000.65ccc678.00000003.000001c5(c3837797) removed subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb).
+SampleInfo.instance_state = NOT_ALIVE_DISPOSED_INSTANCE_STATE
+2022-12-19 12:16:02.911@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_subscription_reference: topic description DCPSParticipant removed subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb).
+2022-12-19 12:16:02.911@LM_WARNING@(3186|3190) WARNING: DataReaderImpl::get_handle_instance: lookup for 0x16 failed
+2022-12-19 12:16:02.911@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: calling pub 01030000.65ccc678.00000001.000001c2(2727b154) with sub 01030000.65ccc678.00000003.000001c7(2d8d16bb)
+2022-12-19 12:16:02.911@LM_DEBUG@(3178|3178) DataWriterImpl::remove_associations: bit 1 local 01030000.65ccc678.00000001.000001c2(2727b154) remote 01030000.65ccc678.00000003.000001c7(2d8d16bb) num remotes 1
+2022-12-19 12:16:02.912@LM_DEBUG@(3186|3190) TcpTransport::release_datalink link[0x7fd4b4022b10] PriorityKey prio=0, addr=127.0.0.1:40069, is_loopback=0, is_active=0
+2022-12-19 12:16:02.912@LM_DEBUG@(3186|3199) DataLink::handle_exception() - (delay) scheduling timer for future release
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: publication 01030000.65ccc678.00000001.000001c2(2727b154) removed subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb) at 3d316ac0.
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::remove_associated_publication: subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb) removed publication 01030000.65ccc678.00000001.000001c2(2727b154) at 3d1dfc50.
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_subscription: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed subscription 01030000.65ccc678.00000003.000001c7(2d8d16bb).
+2022-12-19 12:16:02.912@LM_DEBUG@(3185|3187) DataReaderImpl::remove_associations: bit 1 local 01030000.65ccc678.00000003.000001c7(2d8d16bb) remote 01030000.65ccc678.00000001.000001c2(2727b154) num remotes 1
+2022-12-19 12:16:02.912@LM_DEBUG@(3185|3187) DataReaderImpl::remove_associations_i: bit 1 local 01030000.65ccc678.00000003.000001c7(2d8d16bb) remote 01030000.65ccc678.00000001.000001c2(2727b154) num remotes 1
+2022-12-19 12:16:02.912@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.912@LM_DEBUG@(3185|3187) InstanceState::unregister_was_received on 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.912@LM_DEBUG@(3185|3187) InstanceState::unregister_was_received on 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Topic::remove_subscription_reference: topic 01030000.65ccc678.00000002.000001c5(fee35e27) removed subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b).
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_subscription_reference: topic description DCPSParticipant removed subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b).
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: calling pub 01030000.65ccc678.00000001.000001c2(2727b154) with sub 01030000.65ccc678.00000002.000001c7(10ed3f0b)
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DataWriterImpl::remove_associations: bit 1 local 01030000.65ccc678.00000001.000001c2(2727b154) remote 01030000.65ccc678.00000002.000001c7(10ed3f0b) num remotes 1
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: publication 01030000.65ccc678.00000001.000001c2(2727b154) removed subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b) at 3d313370.
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::remove_associated_publication: subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b) removed publication 01030000.65ccc678.00000001.000001c2(2727b154) at 3d1dfc50.
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_subscription: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed subscription 01030000.65ccc678.00000002.000001c7(10ed3f0b).
+2022-12-19 12:16:02.912@LM_DEBUG@(3186|3188) DataReaderImpl::remove_associations: bit 1 local 01030000.65ccc678.00000002.000001c7(10ed3f0b) remote 01030000.65ccc678.00000001.000001c2(2727b154) num remotes 1
+2022-12-19 12:16:02.912@LM_DEBUG@(3186|3188) DataReaderImpl::remove_associations_i: bit 1 local 01030000.65ccc678.00000002.000001c7(10ed3f0b) remote 01030000.65ccc678.00000001.000001c2(2727b154) num remotes 1
+2022-12-19 12:16:02.912@LM_DEBUG@(3186|3188) InstanceState::unregister_was_received on 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.912@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.912@LM_DEBUG@(3186|3188) InstanceState::unregister_was_received on 01030000.65ccc678.00000001.000001c2(2727b154)
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Topic::remove_subscription_reference: topic 01030000.65ccc678.00000003.000007c5(95d9d011) removed subscription 01030000.65ccc678.00000003.000003c7(1fbb7439).
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_subscription_reference: topic description DCPSPublication removed subscription 01030000.65ccc678.00000003.000003c7(1fbb7439).
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: calling pub 01030000.65ccc678.00000001.000004c2(5a504511) with sub 01030000.65ccc678.00000003.000003c7(1fbb7439)
+2022-12-19 12:16:02.912@LM_DEBUG@(3178|3178) DataWriterImpl::remove_associations: bit 1 local 01030000.65ccc678.00000001.000004c2(5a504511) remote 01030000.65ccc678.00000003.000003c7(1fbb7439) num remotes 1
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: publication 01030000.65ccc678.00000001.000004c2(5a504511) removed subscription 01030000.65ccc678.00000003.000003c7(1fbb7439) at 3d31f1e0.
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::remove_associated_publication: subscription 01030000.65ccc678.00000003.000003c7(1fbb7439) removed publication 01030000.65ccc678.00000001.000004c2(5a504511) at 3d2cd040.
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_subscription: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed subscription 01030000.65ccc678.00000003.000003c7(1fbb7439).
+2022-12-19 12:16:02.913@LM_DEBUG@(3185|3187) DataReaderImpl::remove_associations: bit 1 local 01030000.65ccc678.00000003.000003c7(1fbb7439) remote 01030000.65ccc678.00000001.000004c2(5a504511) num remotes 1
+2022-12-19 12:16:02.913@LM_DEBUG@(3185|3187) DataReaderImpl::remove_associations_i: bit 1 local 01030000.65ccc678.00000003.000003c7(1fbb7439) remote 01030000.65ccc678.00000001.000004c2(5a504511) num remotes 1
+2022-12-19 12:16:02.913@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Topic::remove_subscription_reference: topic 01030000.65ccc678.00000002.000007c5(a8b9f9a1) removed subscription 01030000.65ccc678.00000002.000003c7(22db5d89).
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_subscription_reference: topic description DCPSPublication removed subscription 01030000.65ccc678.00000002.000003c7(22db5d89).
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: calling pub 01030000.65ccc678.00000001.000004c2(5a504511) with sub 01030000.65ccc678.00000002.000003c7(22db5d89)
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DataWriterImpl::remove_associations: bit 1 local 01030000.65ccc678.00000001.000004c2(5a504511) remote 01030000.65ccc678.00000002.000003c7(22db5d89) num remotes 1
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: publication 01030000.65ccc678.00000001.000004c2(5a504511) removed subscription 01030000.65ccc678.00000002.000003c7(22db5d89) at 3d31b800.
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::remove_associated_publication: subscription 01030000.65ccc678.00000002.000003c7(22db5d89) removed publication 01030000.65ccc678.00000001.000004c2(5a504511) at 3d2cd040.
+2022-12-19 12:16:02.913@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_subscription: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed subscription 01030000.65ccc678.00000002.000003c7(22db5d89).
+2022-12-19 12:16:02.913@LM_DEBUG@(3186|3188) DataReaderImpl::remove_associations: bit 1 local 01030000.65ccc678.00000002.000003c7(22db5d89) remote 01030000.65ccc678.00000001.000004c2(5a504511) num remotes 1
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Topic::remove_subscription_reference: topic 01030000.65ccc678.00000003.000006c5(8cc2e150) removed subscription 01030000.65ccc678.00000003.000004c7(50fae2fe).
+2022-12-19 12:16:02.913@LM_DEBUG@(3186|3188) DataReaderImpl::remove_associations_i: bit 1 local 01030000.65ccc678.00000002.000003c7(22db5d89) remote 01030000.65ccc678.00000001.000004c2(5a504511) num remotes 1
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_subscription_reference: topic description DCPSSubscription removed subscription 01030000.65ccc678.00000003.000004c7(50fae2fe).
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: calling pub 01030000.65ccc678.00000001.000003c2(1511d3d6) with sub 01030000.65ccc678.00000003.000004c7(50fae2fe)
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DataWriterImpl::remove_associations: bit 1 local 01030000.65ccc678.00000001.000003c2(1511d3d6) remote 01030000.65ccc678.00000003.000004c7(50fae2fe) num remotes 1
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: publication 01030000.65ccc678.00000001.000003c2(1511d3d6) removed subscription 01030000.65ccc678.00000003.000004c7(50fae2fe) at 3d320590.
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::remove_associated_publication: subscription 01030000.65ccc678.00000003.000004c7(50fae2fe) removed publication 01030000.65ccc678.00000001.000003c2(1511d3d6) at 3d27de90.
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_subscription: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed subscription 01030000.65ccc678.00000003.000004c7(50fae2fe).
+2022-12-19 12:16:02.913@LM_DEBUG@(3185|3187) DataReaderImpl::remove_associations: bit 1 local 01030000.65ccc678.00000003.000004c7(50fae2fe) remote 01030000.65ccc678.00000001.000003c2(1511d3d6) num remotes 1
+2022-12-19 12:16:02.913@LM_DEBUG@(3185|3187) DataReaderImpl::remove_associations_i: bit 1 local 01030000.65ccc678.00000003.000004c7(50fae2fe) remote 01030000.65ccc678.00000001.000003c2(1511d3d6) num remotes 1
+2022-12-19 12:16:02.913@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.913@LM_DEBUG@(3185|3187) InstanceState::unregister_was_received on 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Topic::remove_subscription_reference: topic 01030000.65ccc678.00000002.000006c5(b1a2c8e0) removed subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e).
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_subscription_reference: topic description DCPSSubscription removed subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e).
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: calling pub 01030000.65ccc678.00000001.000003c2(1511d3d6) with sub 01030000.65ccc678.00000002.000004c7(6d9acb4e)
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DataWriterImpl::remove_associations: bit 1 local 01030000.65ccc678.00000001.000003c2(1511d3d6) remote 01030000.65ccc678.00000002.000004c7(6d9acb4e) num remotes 1
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: publication 01030000.65ccc678.00000001.000003c2(1511d3d6) removed subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e) at 3d31d310.
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::remove_associated_publication: subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e) removed publication 01030000.65ccc678.00000001.000003c2(1511d3d6) at 3d27de90.
+2022-12-19 12:16:02.913@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_subscription: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed subscription 01030000.65ccc678.00000002.000004c7(6d9acb4e).
+2022-12-19 12:16:02.914@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.914@LM_DEBUG@(3186|3188) DataReaderImpl::remove_associations: bit 1 local 01030000.65ccc678.00000002.000004c7(6d9acb4e) remote 01030000.65ccc678.00000001.000003c2(1511d3d6) num remotes 1
+2022-12-19 12:16:02.914@LM_DEBUG@(3186|3188) DataReaderImpl::remove_associations_i: bit 1 local 01030000.65ccc678.00000002.000004c7(6d9acb4e) remote 01030000.65ccc678.00000001.000003c2(1511d3d6) num remotes 1
+2022-12-19 12:16:02.914@LM_DEBUG@(3186|3188) InstanceState::unregister_was_received on 01030000.65ccc678.00000001.000003c2(1511d3d6)
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Topic::remove_subscription_reference: topic 01030000.65ccc678.00000003.000005c5(a7efb293) removed subscription 01030000.65ccc678.00000003.000002c7(06a04578).
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_subscription_reference: topic description DCPSTopic removed subscription 01030000.65ccc678.00000003.000002c7(06a04578).
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: calling pub 01030000.65ccc678.00000001.000002c2(0c0ae297) with sub 01030000.65ccc678.00000003.000002c7(06a04578)
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DataWriterImpl::remove_associations: bit 1 local 01030000.65ccc678.00000001.000002c2(0c0ae297) remote 01030000.65ccc678.00000003.000002c7(06a04578) num remotes 1
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) TcpTransport::release_datalink link[0x55e33d317330] PriorityKey prio=0, addr=127.0.0.1:43217, is_loopback=0, is_active=1
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3192) DataLink::handle_exception() - delay already elapsed so handle_timeout now
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: publication 01030000.65ccc678.00000001.000002c2(0c0ae297) removed subscription 01030000.65ccc678.00000003.000002c7(06a04578) at 3d31c6e0.
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3192) TcpTransport::unbind_link link 0x55e33d317330 PriorityKey prio=0, addr=127.0.0.1:43217, is_loopback=0, is_active=1
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::remove_associated_publication: subscription 01030000.65ccc678.00000003.000002c7(06a04578) removed publication 01030000.65ccc678.00000001.000002c2(0c0ae297) at 3d22ebc0.
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_subscription: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed subscription 01030000.65ccc678.00000003.000002c7(06a04578).
+2022-12-19 12:16:02.914@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Topic::remove_subscription_reference: topic 01030000.65ccc678.00000002.000005c5(9a8f9b23) removed subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8).
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_subscription_reference: topic description DCPSTopic removed subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8).
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: calling pub 01030000.65ccc678.00000001.000002c2(0c0ae297) with sub 01030000.65ccc678.00000002.000002c7(3bc06cc8)
+2022-12-19 12:16:02.914@LM_DEBUG@(3185|3196) Peer has gracefully disconnected.
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DataWriterImpl::remove_associations: bit 1 local 01030000.65ccc678.00000001.000002c2(0c0ae297) remote 01030000.65ccc678.00000002.000002c7(3bc06cc8) num remotes 1
+2022-12-19 12:16:02.914@LM_DEBUG@(3185|3196) TcpConnection::handle_close() called on transport: _OPENDDS__BITTCPTransportInst_DEFAULT_REPO to 127.0.0.1:36143 , reconnect_state = INIT_STATE.
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) TcpTransport::release_datalink link[0x55e33d3142b0] PriorityKey prio=0, addr=127.0.0.1:40703, is_loopback=0, is_active=1
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Publication::remove_associated_subscription: publication 01030000.65ccc678.00000001.000002c2(0c0ae297) removed subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8) at 3d3198e0.
+2022-12-19 12:16:02.914@LM_DEBUG@(3185|3196) DataLink::notify: notify sub 01030000.65ccc678.00000003.000002c7(06a04578) DISCONNECTED.
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3192) DataLink::handle_exception() - delay already elapsed so handle_timeout now
+2022-12-19 12:16:02.914@LM_DEBUG@(3185|3187) DataReaderImpl::remove_associations: bit 1 local 01030000.65ccc678.00000003.000002c7(06a04578) remote 01030000.65ccc678.00000001.000002c2(0c0ae297) num remotes 1
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3192) TcpTransport::unbind_link link 0x55e33d3142b0 PriorityKey prio=0, addr=127.0.0.1:40703, is_loopback=0, is_active=1
+2022-12-19 12:16:02.914@LM_DEBUG@(3185|3187) DataReaderImpl::remove_associations_i: bit 1 local 01030000.65ccc678.00000003.000002c7(06a04578) remote 01030000.65ccc678.00000001.000002c2(0c0ae297) num remotes 1
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Subscription::remove_associated_publication: subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8) removed publication 01030000.65ccc678.00000001.000002c2(0c0ae297) at 3d22ebc0.
+2022-12-19 12:16:02.914@LM_DEBUG@(3185|3187) InstanceState::unregister_was_received on 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.914@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_subscription: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed subscription 01030000.65ccc678.00000002.000002c7(3bc06cc8).
+2022-12-19 12:16:02.914@LM_DEBUG@(3185|3187) InstanceState::unregister_was_received on 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.914@LM_DEBUG@(3186|3195) Peer has gracefully disconnected.
+2022-12-19 12:16:02.914@LM_DEBUG@(3186|3195) TcpConnection::handle_close() called on transport: _OPENDDS__BITTCPTransportInst_DEFAULT_REPO to 127.0.0.1:36143 , reconnect_state = INIT_STATE.
+2022-12-19 12:16:02.914@LM_DEBUG@(3185|3187) TcpTransport::release_datalink link[0x7f3570005ad0] PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.914@LM_DEBUG@(3186|3188) DataReaderImpl::remove_associations: bit 1 local 01030000.65ccc678.00000002.000002c7(3bc06cc8) remote 01030000.65ccc678.00000001.000002c2(0c0ae297) num remotes 1
+2022-12-19 12:16:02.914@LM_DEBUG@(3186|3188) DataReaderImpl::remove_associations_i: bit 1 local 01030000.65ccc678.00000002.000002c7(3bc06cc8) remote 01030000.65ccc678.00000001.000002c2(0c0ae297) num remotes 1
+2022-12-19 12:16:02.914@LM_DEBUG@(3186|3195) DataLink::notify: notify sub 01030000.65ccc678.00000002.000002c7(3bc06cc8) DISCONNECTED.
+2022-12-19 12:16:02.914@LM_DEBUG@(3186|3188) InstanceState::unregister_was_received on 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.914@LM_DEBUG@(3185|3196) DataLink::handle_exception() - delay already elapsed so handle_timeout now
+2022-12-19 12:16:02.914@LM_DEBUG@(3185|3196) TcpTransport::unbind_link link 0x7f3570005ad0 PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.915@LM_DEBUG@(3186|3188) InstanceState::unregister_was_received on 01030000.65ccc678.00000001.000002c2(0c0ae297)
+2022-12-19 12:16:02.915@LM_DEBUG@(3186|3188) TcpTransport::release_datalink link[0x7fd4b4005ad0] PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.915@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.915@LM_DEBUG@(3186|3195) DataLink::handle_exception() - delay already elapsed so handle_timeout now
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) found topic 01030000.65ccc678.00000003.000001c5(c3837797) at 3d30fb70.
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description DCPSParticipant removed topic 01030000.65ccc678.00000003.000001c5(c3837797).
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed topic 01030000.65ccc678.00000003.000001c5(c3837797) at 0x3d30fb70.
+2022-12-19 12:16:02.915@LM_DEBUG@(3186|3195) TcpTransport::unbind_link link 0x7fd4b4005ad0 PriorityKey prio=0, addr=127.0.0.1:36143, is_loopback=0, is_active=0
+2022-12-19 12:16:02.915@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.915@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) found topic 01030000.65ccc678.00000003.000007c5(95d9d011) at 3d313070.
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description DCPSPublication removed topic 01030000.65ccc678.00000003.000007c5(95d9d011).
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed topic 01030000.65ccc678.00000003.000007c5(95d9d011) at 0x3d313070.
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Topic::remove_subscription_reference: topic 01030000.65ccc678.00000002.00000845(c299664e) removed subscription 01030000.65ccc678.00000002.00000507(efe538bf).
+2022-12-19 12:16:02.915@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_subscription_reference: topic description Movie Discussion List removed subscription 01030000.65ccc678.00000002.00000507(efe538bf).
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d277088
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_subscription: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed subscription 01030000.65ccc678.00000002.00000507(efe538bf).
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) found topic 01030000.65ccc678.00000003.000006c5(8cc2e150) at 3d312c50.
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description DCPSSubscription removed topic 01030000.65ccc678.00000003.000006c5(8cc2e150).
+2022-12-19 12:16:02.915@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed topic 01030000.65ccc678.00000003.000006c5(8cc2e150) at 0x3d312c50.
+2022-12-19 12:16:02.915@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.915@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) found topic 01030000.65ccc678.00000002.000001c5(fee35e27) at 3d310370.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description DCPSParticipant removed topic 01030000.65ccc678.00000002.000001c5(fee35e27).
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed topic 01030000.65ccc678.00000002.000001c5(fee35e27) at 0x3d310370.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) found topic 01030000.65ccc678.00000003.000005c5(a7efb293) at 3d3127f0.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description DCPSTopic removed topic 01030000.65ccc678.00000003.000005c5(a7efb293).
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed topic 01030000.65ccc678.00000003.000005c5(a7efb293) at 0x3d3127f0.
+2022-12-19 12:16:02.916@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) found topic 01030000.65ccc678.00000002.000007c5(a8b9f9a1) at 3d312e70.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description DCPSPublication removed topic 01030000.65ccc678.00000002.000007c5(a8b9f9a1).
+2022-12-19 12:16:02.916@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed topic 01030000.65ccc678.00000002.000007c5(a8b9f9a1) at 0x3d312e70.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) found topic 01030000.65ccc678.00000003.00000845(fff94ffe) at 3d321ca0.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description Movie Discussion List removed topic 01030000.65ccc678.00000003.00000845(fff94ffe).
+2022-12-19 12:16:02.916@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed topic 01030000.65ccc678.00000003.00000845(fff94ffe) at 0x3d321ca0.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d227b30
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) found topic 01030000.65ccc678.00000002.000006c5(b1a2c8e0) at 3d312a30.
+2022-12-19 12:16:02.916@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description DCPSSubscription removed topic 01030000.65ccc678.00000002.000006c5(b1a2c8e0).
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed topic 01030000.65ccc678.00000002.000006c5(b1a2c8e0) at 0x3d312a30.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) found topic 01030000.65ccc678.00000003.000004c5(bef483d2) at 3d3123d0.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description OpenDDSConnectionRecord removed topic 01030000.65ccc678.00000003.000004c5(bef483d2).
+2022-12-19 12:16:02.916@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed topic 01030000.65ccc678.00000003.000004c5(bef483d2) at 0x3d3123d0.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) found topic 01030000.65ccc678.00000002.000005c5(9a8f9b23) at 3d3125f0.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description DCPSTopic removed topic 01030000.65ccc678.00000002.000005c5(9a8f9b23).
+2022-12-19 12:16:02.916@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed topic 01030000.65ccc678.00000002.000005c5(9a8f9b23) at 0x3d3125f0.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) found topic 01030000.65ccc678.00000003.000003c5(f1b51515) at 3d311df0.
+2022-12-19 12:16:02.916@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description OpenDDSInternalThread removed topic 01030000.65ccc678.00000003.000003c5(f1b51515).
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed topic 01030000.65ccc678.00000003.000003c5(f1b51515) at 0x3d311df0.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) found topic 01030000.65ccc678.00000002.00000845(c299664e) at 3d31dc80.
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description Movie Discussion List removed topic 01030000.65ccc678.00000002.00000845(c299664e).
+2022-12-19 12:16:02.916@LM_DEBUG@TAO (3185|3187) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.916@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed topic 01030000.65ccc678.00000002.00000845(c299664e) at 0x3d31dc80.
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d227c88
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) found topic 01030000.65ccc678.00000003.000002c5(e8ae2454) at 3d310e20.
+2022-12-19 12:16:02.917@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description OpenDDSParticipantLocation removed topic 01030000.65ccc678.00000003.000002c5(e8ae2454).
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) removed topic 01030000.65ccc678.00000003.000002c5(e8ae2454) at 0x3d310e20.
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) found topic 01030000.65ccc678.00000002.000004c5(8394aa62) at 3d312110.
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description OpenDDSConnectionRecord removed topic 01030000.65ccc678.00000002.000004c5(8394aa62).
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed topic 01030000.65ccc678.00000002.000004c5(8394aa62) at 0x3d312110.
+2022-12-19 12:16:02.917@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) found topic 01030000.65ccc678.00000002.000003c5(ccd53ca5) at 3d311bb0.
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description OpenDDSInternalThread removed topic 01030000.65ccc678.00000002.000003c5(ccd53ca5).
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed topic 01030000.65ccc678.00000002.000003c5(ccd53ca5) at 0x3d311bb0.
+2022-12-19 12:16:02.917@LM_DEBUG@TAO (3186|3188) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) found topic 01030000.65ccc678.00000002.000002c5(d5ce0de4) at 3d310050.
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Topic_Description::remove_topic: topic description OpenDDSParticipantLocation removed topic 01030000.65ccc678.00000002.000002c5(d5ce0de4).
+2022-12-19 12:16:02.917@LM_DEBUG@(3178|3178) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) removed topic 01030000.65ccc678.00000002.000002c5(d5ce0de4) at 0x3d310050.
+2022-12-19 12:16:02.917@LM_DEBUG@TAO (3185|3185) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.918@LM_DEBUG@(3178|3178) DCPS_IR_Domain::remove_participant: removed participant 01030000.65ccc678.00000003.000001c1(c4eeb38e) at 0x3d311740 from domain 42.
+2022-12-19 12:16:02.918@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d104c90
+2022-12-19 12:16:02.918@LM_DEBUG@(3185|3185) Service_Participant::shutdown
+2022-12-19 12:16:02.918@LM_DEBUG@TAO (3186|3186) - TAO_Connector::connect: found a transport [9] busy_count = 0
+2022-12-19 12:16:02.918@LM_DEBUG@(3178|3178) DCPS_IR_Domain::remove_participant: removed participant 01030000.65ccc678.00000002.000001c1(f98e9a3e) at 0x3d310820 from domain 42.
+2022-12-19 12:16:02.918@LM_DEBUG@(3178|3178) WriteDataContainer::data_delivered 0x55e33d104de8
+2022-12-19 12:16:02.918@LM_DEBUG@(3186|3199) Peer has gracefully disconnected.
+2022-12-19 12:16:02.918@LM_DEBUG@(3186|3199) TcpConnection::handle_close() called on transport: _OPENDDS_0500_TCP to 127.0.0.1:40069 , reconnect_state = INIT_STATE.
+2022-12-19 12:16:02.918@LM_DEBUG@(3178|3184) WriteDataContainer::data_delivered 0x55e33d104de8
+2022-12-19 12:16:02.918@LM_DEBUG@(3178|3184) WriteDataContainer::data_delivered 0x55e33d104de8
+2022-12-19 12:16:02.918@LM_DEBUG@(3178|3184) WriteDataContainer::data_delivered 0x55e33d2c6728
+2022-12-19 12:16:02.918@LM_DEBUG@(3178|3184) WriteDataContainer::data_delivered 0x55e33d277088
+2022-12-19 12:16:02.918@LM_DEBUG@(3178|3184) WriteDataContainer::data_delivered 0x55e33d227c88
+2022-12-19 12:16:02.918@LM_DEBUG@(3178|3184) WriteDataContainer::data_delivered 0x55e33d227c88
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Topic::remove_publication_reference: topic 01030000.65ccc678.00000001.000001c5(b94324f7) removed publication 01030000.65ccc678.00000001.000001c2(2727b154).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::remove_publication: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) removed publication 01030000.65ccc678.00000001.000001c2(2727b154).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Topic::remove_publication_reference: topic 01030000.65ccc678.00000001.000004c5(c434d0b2) removed publication 01030000.65ccc678.00000001.000004c2(5a504511).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::remove_publication: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) removed publication 01030000.65ccc678.00000001.000004c2(5a504511).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Topic::remove_publication_reference: topic 01030000.65ccc678.00000001.000003c5(8b754675) removed publication 01030000.65ccc678.00000001.000003c2(1511d3d6).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::remove_publication: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) removed publication 01030000.65ccc678.00000001.000003c2(1511d3d6).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Topic::remove_publication_reference: topic 01030000.65ccc678.00000001.000002c5(926e7734) removed publication 01030000.65ccc678.00000001.000002c2(0c0ae297).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::remove_publication: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) removed publication 01030000.65ccc678.00000001.000002c2(0c0ae297).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) found topic 01030000.65ccc678.00000001.000001c5(b94324f7) at 3d0fe750.
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Topic_Description::remove_topic: topic description DCPSParticipant removed topic 01030000.65ccc678.00000001.000001c5(b94324f7).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) removed topic 01030000.65ccc678.00000001.000001c5(b94324f7) at 0x3d0fe750.
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) found topic 01030000.65ccc678.00000001.000004c5(c434d0b2) at 3d100410.
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Topic_Description::remove_topic: topic description DCPSPublication removed topic 01030000.65ccc678.00000001.000004c5(c434d0b2).
+2022-12-19 12:16:02.919@LM_DEBUG@TAO (3185|3185) - Connection_Handler[9]::close_connection_eh, purging entry from cache
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) removed topic 01030000.65ccc678.00000001.000004c5(c434d0b2) at 0x3d100410.
+2022-12-19 12:16:02.919@LM_DEBUG@TAO (3185|3185) - Connection_Handler[9]::close_connection_eh, removing from the reactor
+2022-12-19 12:16:02.919@LM_DEBUG@TAO (3185|3185) - Connection_Handler[9]::close_connection_eh, cancel all timers
+2022-12-19 12:16:02.919@LM_DEBUG@TAO (3185|3185) - Connection_Handler[9]::close_connection_eh end
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) found topic 01030000.65ccc678.00000001.000003c5(8b754675) at 3d0ffa50.
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Topic_Description::remove_topic: topic description DCPSSubscription removed topic 01030000.65ccc678.00000001.000003c5(8b754675).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) removed topic 01030000.65ccc678.00000001.000003c5(8b754675) at 0x3d0ffa50.
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::find_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) found topic 01030000.65ccc678.00000001.000002c5(926e7734) at 3d0ff090.
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Topic_Description::remove_topic: topic description DCPSTopic removed topic 01030000.65ccc678.00000001.000002c5(926e7734).
+2022-12-19 12:16:02.919@LM_DEBUG@(3178|3184) DCPS_IR_Participant::remove_topic_reference: participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) removed topic 01030000.65ccc678.00000001.000002c5(926e7734) at 0x3d0ff090.
+2022-12-19 12:16:02.920@LM_DEBUG@(3185|3185) DomainParticipantFactoryImpl::~DomainParticipantFactoryImpl()
+2022-12-19 12:16:02.920@LM_DEBUG@(3185|3185) Service_Participant::~Service_Participant
+2022-12-19 12:16:02.920@LM_DEBUG@(3185|3185) Service_Participant::shutdown
+2022-12-19 12:16:02.921@LM_DEBUG@(3178|3184) DCPS_IR_Domain::remove_participant: removed participant 01030000.65ccc678.00000001.000001c1(be2ee0ee) at 0x3d0fd920 from domain 42.
+2022-12-19 12:16:02.921@LM_ERROR@TAO (3178|3178) - Transport[10]::handle_input, error parsing incoming message
+2022-12-19 12:16:02.921@LM_DEBUG@TAO (3178|3178) - Connection_Handler[10]::close_connection_eh, purging entry from cache
+2022-12-19 12:16:02.921@LM_DEBUG@(3186|3186) Service_Participant::shutdown
+2022-12-19 12:16:02.921@LM_DEBUG@TAO (3178|3178) - Connection_Handler[10]::close_connection_eh, removing from the reactor
+2022-12-19 12:16:02.921@LM_DEBUG@TAO (3178|3178) - Connection_Handler[10]::close_connection_eh, cancel all timers
+2022-12-19 12:16:02.921@LM_DEBUG@TAO (3178|3178) - Connection_Handler[10]::close_connection_eh end
+2022-12-19 12:16:02.923@LM_DEBUG@TAO (3186|3186) - Connection_Handler[9]::close_connection_eh, purging entry from cache
+2022-12-19 12:16:02.923@LM_DEBUG@TAO (3186|3186) - Connection_Handler[9]::close_connection_eh, removing from the reactor
+2022-12-19 12:16:02.923@LM_DEBUG@TAO (3186|3186) - Connection_Handler[9]::close_connection_eh, cancel all timers
+2022-12-19 12:16:02.923@LM_DEBUG@TAO (3186|3186) - Connection_Handler[9]::close_connection_eh end
+2022-12-19 12:16:02.923@LM_ERROR@TAO (3178|3178) - Transport[9]::handle_input, error parsing incoming message
+2022-12-19 12:16:02.923@LM_DEBUG@TAO (3178|3178) - Connection_Handler[9]::close_connection_eh, purging entry from cache
+2022-12-19 12:16:02.923@LM_DEBUG@TAO (3178|3178) - Connection_Handler[9]::close_connection_eh, removing from the reactor
+2022-12-19 12:16:02.923@LM_DEBUG@TAO (3178|3178) - Connection_Handler[9]::close_connection_eh, cancel all timers
+2022-12-19 12:16:02.923@LM_DEBUG@TAO (3178|3178) - Connection_Handler[9]::close_connection_eh end
+2022-12-19 12:16:02.924@LM_DEBUG@(3186|3186) DomainParticipantFactoryImpl::~DomainParticipantFactoryImpl()
+2022-12-19 12:16:02.924@LM_DEBUG@(3186|3186) Service_Participant::~Service_Participant
+2022-12-19 12:16:02.924@LM_DEBUG@(3186|3186) Service_Participant::shutdown
+INFO: /home/cnc1/OpenDDS/bin/DCPSInfoRepo being killed.
+2022-12-19 12:16:03.006@LM_DEBUG@InfoRepo_Shutdown: shutting down on signal 15
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3178) Federator::ManagerImpl::finalize()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3178) UpdateReceiver::stop()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3178) UpdateReceiver::stop()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3178) UpdateReceiver::stop()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3181) UpdateReceiver::close()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3179) UpdateReceiver::close()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3180) UpdateReceiver::close()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3178) UpdateReceiver::stop()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3178) UpdateReceiver::stop()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3182) UpdateReceiver::close()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3183) UpdateReceiver::close()
+2022-12-19 12:16:03.006@LM_DEBUG@(3178|3178) Service_Participant::shutdown
+2022-12-19 12:16:03.008@LM_DEBUG@(3178|3178) DomainParticipantFactoryImpl::~DomainParticipantFactoryImpl()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) Federator::ManagerImpl::~ManagerImpl()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateListener::~UpdateListener
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateReceiver::~UpdateReceiver()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateReceiver::stop()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateListener::~UpdateListener
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateReceiver::~UpdateReceiver()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateReceiver::stop()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateListener::~UpdateListener
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateReceiver::~UpdateReceiver()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateReceiver::stop()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateListener::~UpdateListener
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateReceiver::~UpdateReceiver()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateReceiver::stop()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateListener::~UpdateListener
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateReceiver::~UpdateReceiver()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateReceiver::stop()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateProcessor::~UpdateProcessor()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateProcessor::~UpdateProcessor()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateProcessor::~UpdateProcessor()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateProcessor::~UpdateProcessor()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) UpdateProcessor::~UpdateProcessor()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) INFO: Federator::Config::~FederatorConfig()
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) Service_Participant::~Service_Participant
+2022-12-19 12:16:03.009@LM_DEBUG@(3178|3178) Service_Participant::shutdown
+cnc1@cnc1-OptiPlex-9020:~/OpenDDS/DevGuideExamples/DCPS/Messenger$ 
+------------------------------------------

@@ -1,3 +1,14 @@
+-----------------------------------------------------------------
+    My folder location "/home/cnc1/OpenDDS" is only for my system
+    and will need to be changed to match other systems.
+
+    $  or # is used to indicate linux prompt type (normal or root)
+    in the terminal window and is not part of the command listed.
+
+    Example:
+        $  / normal prompt
+        #  / root prompt
+-----------------------------------------------------------------
 
 Test: Messenger_ZeroCopy - From: /home/cnc1/OpenDDS/DevGuideExamples/DCPS folder.
 
