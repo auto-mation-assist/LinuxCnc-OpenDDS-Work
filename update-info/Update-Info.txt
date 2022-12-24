@@ -1,0 +1,20 @@
+# LinuxCnc-OpenDDS-Work
+
+12-24-2022
+OpenDDS version 3.23 became available several days ago.
+
+OpenDDS Version 3.23.0 now available!
+Improved support for XTypes and the Dynamic Data API
+
+    Spec-defined interfaces for Dynamic Data and the Dynamic Language Binding including Dynamic Data Writer and Dynamic Data Reader
+    Types can be loaded from generated code or received from peers via discovery
+    Compiled type libraries can be used as plugins
+    OpenDDS Monitor - XTypes-based replacement for existing monitor tool 
+
+https://github.com/objectcomputing/OpenDDS.git
+
+Updated Developer's Guide
+
+An updated version of the OpenDDS Developer's Guide and other helpful documents can be found here: https://opendds.org/documents 
+
+
